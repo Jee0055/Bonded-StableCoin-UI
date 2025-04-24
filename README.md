@@ -1,2 +1,26 @@
-# Bonded-StableCoin-UI
-This repository contains the frontend UI for the REChain protocol — a new standard for decentralized autonomous finance powered by bonded assets, stable instruments, and next-gen blockchain tooling.
+# bonded stable
+
+## Install
+
+Install node.js, clone the repository, then say
+
+```sh
+yarn
+```
+
+## ENV
+
+Copy the appropriate .env.XXXX file to .env.
+
+## Run
+
+```sh
+yarn start
+```
+
+## Build
+
+```sh
+yarn build
+```
+
