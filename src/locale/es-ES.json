@@ -1,0 +1,911 @@
+{
+  "main_menu": {
+    "menu": "Menú",
+    "trade": "Intercambiar",
+    "buy_with_btc": "Comprar con Bitcoin",
+    "referral": "Programa de Referidos",
+    "create": "Crear",
+    "how": "Cómo funciona",
+    "select_wallet": {
+      "placeholder": "Selecciona la dirección de tu billetera / wallet",
+      "no_found": "Ninguna billetera encontrada",
+      "btn": "Añadir"
+    }
+  },
+  "qr_button": {
+    "title": "<0>Escanea este código QR <1></1> con tu teléfono móvil</0>",
+    "download_title": "Descargar la billetera rechain_inc",
+    "tooltip": "Esto abrirá tu billetera rechain_inc instalada en este equipo y enviará la transacción",
+    "tooltip_mob": "Envía la transacción desde tu teléfono móvil",
+    "install": "Instala la billetera rechain_inc para [ios] o [android] si aún no tienes una",
+    "rechain_inc_in": "rechain_inc en"
+  },
+  "select_stablecoin": {
+    "placeholder": "Por favor selecciona una stablecoin / moneda estable",
+    "recent": "Reciente",
+    "other": "Otro",
+    "all": "Todo"
+  },
+  "footer": {
+    "join_community": "Únase a la comunidad y obtenga ayuda"
+  },
+  "trade": {
+    "statistic": {
+      "p2UnitsText": {
+        "inversed": "El precio mostrado es el precio del activo de reserva {{reserveSymbolOrAsset}} en términos de Moneda2 ({{symbol2orAsset}}).",
+        "not_inversed": "El precio mostrado es el precio de Moneda2 ({{symbol2OrAsset}}) en términos del activo de reserva {{reserveSymbol}}."
+      },
+      "fund_supply": {
+        "name": "Suministro de monedas de fondos",
+        "desc": "Suministro total de monedas de fondos"
+      },
+      "token1_supply": {
+        "name": "Suministro de Monedas1",
+        "desc": "Suministro total de Moneda1 (monedas de crecimiento)"
+      },
+      "token2_supply": {
+        "name": "Suministro de Monedas2",
+        "desc": "Suministro total de Moneda2 (monedas de intereses)"
+      },
+      "token_stable_supply": {
+        "name": "Suministro de monedas estables",
+        "desc": "Suministro total de monedas estables"
+      },
+      "reserve": {
+        "name": "Reserva",
+        "desc": "Cantidad total de reserva bloqueada para respaldar la emisión de monedas T1 y T2"
+      },
+      "fund_price": {
+        "name": "{{symbol4}} precio",
+        "desc": "El precio actual de las monedas de fondos."
+      },
+      "token1_price": {
+        "name": "Precio {{symbol1}}",
+        "desc": "El precio actual de Moneda1 según la curva de bonos. Depende de los suministros de Moneda1 y Moneda2. El precio es mostrado en términos de la moneda de reserva."
+      },
+      "current_price": {
+        "name": "Precio actual",
+        "desc": "El precio actual según la curva de bonos. Depende de los suministros de Moneda1 y Moneda2. "
+      },
+      "target_price": {
+        "name": "Precio deseado",
+        "desc": "El precio Moneda2 está fijado a. Es el precio oracle más interés. "
+      },
+      "oracle_price": {
+        "name": "Precio oracle",
+        "desc": "Precio más reciente reportado por el oracle"
+      },
+      "show": "Mostrar info",
+      "hide": "Esconder info"
+    },
+    "tabs": {
+      "transactions": {
+        "head": {
+          "status": "Estado",
+          "event": "Evento",
+          "input": "Entrada",
+          "output": "Resultado",
+          "user": "Usuario",
+          "time": "Hora"
+        },
+        "error": "Error",
+        "stable": "Estable",
+        "not_stable": "No estable",
+        "output": "Resultado",
+        "title": "Transacciones",
+        "desc": "En esta sección puedes ver las transacciones de agentes autónomos asociados con la moneda estable seleccionada",
+        "curve": "Curva",
+        "address": "La dirección del agente autónomo",
+        "deposits": "Depósitos",
+        "de": "Motor de decisiones",
+        "governance": "Gobernación",
+        "name": "Transacciones",
+        "events": {
+          "buy": "Comprar monedas",
+          "move_capacity": "Mover capacidad desde piscina lenta a la rápida",
+          "redeem": "Canjear monedas",
+          "change_param_auto": "Cambiar {{name}} a {{value}}",
+          "notifyDE": "Notificar al motor de decisiones",
+          "change_recipient": "Cambiar el recibidor de interés",
+          "add_protection": "Agregar protección",
+          "withdraw_protection": "Retirar protección",
+          "challenged_force_close": "Desafió un cierre forzado",
+          "commit_force_close": "Hacer un cierre forzado",
+          "close_deposit": "Cerrar un depósito",
+          "withdraw_interest": "Retirar interés",
+          "open": "Abrir un Depósito",
+          "commit_new_value": "Comprometer el nuevo valor de {{name}}: {{value}}",
+          "add_support_param": "Añadir soporte para el valor {{name}} de {{value}}",
+          "withdraw_balance": "Retirar el saldo de la gobernación",
+          "remove_support_param": "Eliminar soporte para el {{name}}",
+          "buy_stable": "Comprar {{symbol}}",
+          "sell_stable": "Vender {{symbol}}",
+          "fix_price": "Fijas precio",
+          "buy_shares": "Comprar {{symbol}}",
+          "sell_shares": "Vender {{symbol}}",
+          "conf": "Configuración",
+          "not_indent": "No identificado"
+        }
+      },
+      "buy_redeem": {
+        "desc_interest": "Moneda de interés que gana {{currentInterestPercent}}% de interés en {{currentPegged}} — una moneda estable+. Para inversores que buscan ingresos predecibles.",
+        "desc_fund": "Moneda de fondo cuyo valor está vinculado a la cantidad de {{symbol2}} emitida. Para inversores que buscan mayores ingresos, con mayores riesgos.",
+        "desc_stable": "Moneda estable cuyo valor es 1 {{currentPegged}}. Para uso en el comercio y el intercambio.",
+        "desc_RECH": "La moneda principal de la red rechain_inc.",
+        "you_send": "Envías",
+        "select_token": "Seleccione una moneda",
+        "protect_v2": "1% de esta cantidad será añadido para proteger contra la volatilidad del precio, recibirás esta cantidad de vuelta si el precio no cambia.",
+        "you_get": "Obtienes",
+        "big_change": "La transacción cambiará mucho el precio, por favor intenta una cantidad menor",
+        "hide_details": "ocultar detalles",
+        "show_details": "mostrar detalles",
+        "fee": "Comisión",
+        "reward": "Recompensa",
+        "price_change": "Cambio de precio",
+        "price": "Precio",
+        "final_price": "Precio final",
+        "above_target": "arriba del objetivo",
+        "below_target": "por debajo del objetivo",
+        "exchange": "Cambiar",
+        "open_wallet": "Hacer click en “Comprar” abrirá tu billetera rechain_inc. <1>Instálala</1> si no tienes una todavía.",
+        "title_buy": "Comprar monedas",
+        "first": "Eres el primero en comprar monedas de esta stablecoin, entonces debes comprar moneda 1 y moneda 2 en el mismo momento.",
+        "subtitle_buy": "Cuantas monedas de cada tipo quieres comprar",
+        "minimize": "Establecer cantidad fe moneda1 para minimizar comisiones",
+        "amount1_placeholder": "Cantidad de monedas1 ({{symbolOrAsset}} — monedas de crecimiento)",
+        "convert": "Convertir inmediatamente {{symbol2}} a moneda estable {{symbol3}}",
+        "issue_will_receive": "recibirás {{amount}} {{symbol}}",
+        "issue_will_open_deposit": "(abrirá un depósito)",
+        "amount2_placeholder": "Cantidad de monedas2 ({{symbolOrAsset}} — monedas de intereses)",
+        "send": "Enviar",
+        "protect": "1% fue añadido para proteger contra la volatilidad del precio, recibirás esta cantidad de vuelta si el precio no cambia.",
+        "title": "Comprar y canjear",
+        "redeem_will_receive": "Recibirás {{amount}} {{symbol}}",
+        "redeem": "Canjear",
+        "title_redeem": "Canjear moneda{{number}} {{symbol}}",
+        "redeem_both": "Si quieres canjear dos monedas al mismo tiempo, te recomendamos que utilices un <1>agente intermediario</1>.",
+        "add_wallet": "Por favor, añade tu billetera para usar",
+        "name": "Comprar/canjear",
+        "liquidity": "<0>Puedes ganar interés adicional añadiendo estas monedas a las piscinas de liquidez, ver <1>liquidity.rechain_inc.org</1>.</0>"
+      },
+      "capacitor": {
+        "title": "Info de capacitadores",
+        "desc": "Los capacitores almacenan las comisiones cargadas por usuarios que movieron el precio lejos de la fijación. Se utilizan para premiar aquellos que mueven el precio de regreso a la fijación.",
+        "fast": {
+          "title": "Capacidad rápida",
+          "desc": "Esta capacidad está inmediatamente disponible para premiar usuarios que mueven el precio de regreso a la fijación."
+        },
+        "slow": {
+          "title": "Capacidad lenta",
+          "desc": "Esta capacidad está reservada para el futuro y será gradualmente movida a la capacidad rápida."
+        },
+        "time_until": {
+          "title": "Tiempo hasta el próximo movimiento",
+          "expired": "El tiempo ha caducado"
+        },
+        "move": {
+          "title": "Mover la capacidad al estanque rápido",
+          "desc": "La capacidad puede ser movida de la piscina lenta a la piscina rápida si el precio se desconecta de la fijación más de {{threshold_distance}}% y se queda allí más de {{hours}} h. {{minutes}} m.",
+          "btn": "Haz click para mover"
+        },
+        "name": "Capacitores"
+      },
+      "charts": {
+        "legend": "{{symbol}} precio (en {{currency}})",
+        "title": "Gráficos",
+        "name": "Gráficos"
+      },
+      "deposits": {
+        "for_empty": "No tienes ningún depósito abierto, por favor <2> abre uno nuevo</2> o cambia la dirección de tu billetera.",
+        "disabled": "Los depósitos están desactivados cuando no hay tasa de interés.",
+        "no_auth": "Por favor agrega la dirección de tu billetera para ver/abrir depósitos.",
+        "title": "Depósitos",
+        "open": "Depósito abierto",
+        "create": "Crear un depósito para intercambiar tu {{symbol2}} por monedas estables {{symbol3}} y periódicamente retirar interés en {{symbol3}} mientras acumula. Puedes comerciar {{symbol3}} en <9>Oswap.io</9> o <11>ODEX</11>.",
+        "min_protection_ratio": "La relación de protección mínima es actualmente",
+        "close_info": "Un nuevo depósito no puede ser cerrado dentro de <1>{{hours}} horas</1> después de abierto.",
+        "highlighted": "Los depósitos con una protección insuficiente son <1>resaltados en rojo</1>.",
+        "force_close_info": "Puedes cerrar los depósitos de otras personas para cambiar tus {{symbol3}} por {{symbol2}}. El propietario del depósito cerrado simplemente dejará de recibir interés, no habrá pérdida directa para ellos. Sólo los depósitos menos protegidos pueden ser cerrados, tu pierdes dinero si intentas cerrar cualquier depósito que no esté menos protegido.",
+        "challenging_period_info": "El cierre empieza un <1>{{challengingPeriodInHours}}-período de hora de desafío</1> durante el cual tu solicitud de cierre puede ser desafiada si hay otro depósito con un ratio de protección aún menor. Después de que expire el período de desafío, podrás comprometer el cierre y los {{symbol2}} del depósito te serán liberados.",
+        "warning": "Esta página es beta, puede tener errores y mostrar información incorrecta que te puede llevar a intentar cerrar un depósito que no esté menos protegido y que perder dinero. Comprueba esta información usando variables de estado en el <1>explorador</1>.",
+        "interest_recipient_tab_info": "Depósitos de otras personas donde usted es recibidor de intereses. Usa esta página para retirar intereses.",
+        "less_last": "La relación de protección de este depósito está por encima de la más pequeña",
+        "too_new": "Este depósito fue abierto hace menos de {{hours}} horas y no puede cerrarse aún",
+        "challenging_period": "El compromiso estará disponible en {{hours}} horas cuando el periodo de desafío expire",
+        "opened": "Abierto",
+        "interest_title": "Monedas de intereses",
+        "stable_title": "Monedas estables",
+        "interest": "Interés",
+        "interest_recipient": "Interés destinatario",
+        "you": "tú",
+        "protection": "Protección (proporción)",
+        "withdraw_interest": "Interés de retiro",
+        "edit_interest_recipient": "Editar interés destinatario",
+        "add_protection": "Agregar protección",
+        "withdraw_protection": "Protección de retiro",
+        "close": "Cerrar",
+        "force_close": "Forzar cierre",
+        "commit_force_close": "Hacer un cierre forzado",
+        "challenge": "Desafiar",
+        "interest_title_desc": "Cantidad de monedas de intereses",
+        "stable_title_desc": "Cantidad de monedas estables emitidas contra el depósito",
+        "protection_desc": "El depósito adicional en {{reserve}} que protege el depósito de ser cerrado por otros. El depósito con la menor proporción de protección para depositar cantidad puede ser cerrada por cualquiera. No hay pérdida directa para ti cuando tu depósito es cerrado pero tú dejas de recibir interés de él.",
+        "interest_desc": "Interés disponible para retiro",
+        "interest_recipient_desc": "Quién recibe interés (depósito dueño por defecto)",
+        "my_deposits": "Mis depósitos",
+        "me_as_interest_recipient": "Yo como recibidor de interés",
+        "all_deposits": "Todos los depósitos",
+        "name": "Depósitos"
+      },
+      "governance": {
+        "withdraw": {
+          "balance": "Tu {{symbol}} balance bloqueado en Agentes Autónomos gobernantes es {{balance}}.",
+          "fields": "Para poder retirar, necesitas remover el apoyo de estos campos",
+          "withdraw": "Retirar"
+        },
+        "no_auth": "Por favor agregar la dirección de tu billetera para participar en la gobernación",
+        "title": "Gobernación",
+        "desc": "Los portadores de {{symbol1}} pueden votar para cambiar varios parámetros de la moneda estables y asegurar su éxito. <2></2> el valor de {{symbol1}} crece a medida que más {{symbol2}} monedas son compradas.",
+        "change_parameters": "Cambiar parámetros",
+        "value": "Valor",
+        "support": "Apoyar",
+        "add_support": "añadir soporte para este valor",
+        "vote_for_this": "votar por este valor",
+        "current_value": "Valor actual",
+        "leader": "Líder",
+        "my_choice": "Mi elección",
+        "expires_period": "Período desafiante expira en",
+        "another_value": "sugerir otro valor",
+        "commit": "comprometer",
+        "remove_support": "remover soporte",
+        "name": "Gobernación"
+      },
+      "parameters": {
+        "title_curve": "Curva",
+        "title_deposits": "Depósitos",
+        "title_stable": "Estable",
+        "title_fund": "Fondo de estabilidad",
+        "title_governance": "Gobernación",
+        "title_de": "Motor de decisiones",
+        "edit": "editar",
+        "show_info": "Mostrar info",
+        "latest_value": "Último valor",
+        "tokens1": "Monedas1",
+        "asset": "activo",
+        "tokens2": "Monedas2",
+        "stable_tokens": "Monedas estables",
+        "fund_tokens": "Monedas de fondos",
+        "title": "Parámetros de la stablecoin",
+        "view": "Ver en el explorador",
+        "title_autonomous_agents": "Agentes autónomos",
+        "title_tokens": "Monedas",
+        "title_capacitor": "Capacitor",
+        "name": "Parámetros"
+      },
+      "stability_fund": {
+        "title": "Fondo de estabilidad",
+        "desc": "En monedas estables v2, el fondo se utiliza para mantener automáticamente el precio cerca de la fijación.",
+        "info_title": "Información del fondo",
+        "total_asset": "Valor total del activo",
+        "buy_title": "Comprar",
+        "buy_desc": "El RECH que inviertas se añadirá a las reservas del fondo y obtendrás sus acciones a cambio.",
+        "amount": "Cantidad de acciones",
+        "send": "Enviar {{count}}",
+        "send_plural": "Enviar {{count}}",
+        "redeem_title": "Canjear",
+        "redeem_desc": "Cuando canjeas, obtienes tu parte de los activos del fondo en la moneda de reserva {{reserve_asset_symbol}}, más tu parte de {{symbol}} es canjeada (potencialmente afectando el precio y las comisiones de pago) y los ingresos en {{reserve_asset_symbol}} también te son enviados.",
+        "fix_title": "Fijar precio de {{symbol}}",
+        "next_fix": "Tiempo hasta el próximo arreglo",
+        "expired": "Vencido",
+        "fix_btn": "Envía la solicitud de arreglo",
+        "name": "Fondo de estabilidad"
+      }
+    }
+  },
+  "modals": {
+    "add_protection": {
+      "title": "Añadir proteger al depósito",
+      "btn": "Agregar protección",
+      "ratio": "Ratio de protección"
+    },
+    "common": {
+      "close": "Cerrar",
+      "amount": "Cantidad",
+      "add": "Agregar",
+      "check": "Revisar",
+      "edit": "Editar",
+      "open": "Abrir",
+      "cancel": "Cancelar",
+      "done": "Hecho"
+    },
+    "add_wallet": {
+      "title": "Agregar billetera",
+      "desc": "Introduce tu dirección de billetera rechain_inc. Si no tienes una billetera rechain_inc aún, <2>instalar</2> aquí.",
+      "wallet_address": "Dirección de billetera"
+    },
+    "change_param": {
+      "valid": {
+        "fee_multiplier": "El valor del parámetro multiplicador de comisión debe ser mayor que {{value}}",
+        "moved_capacity_share": "El valor del parámetro acción_decapacidad_movida (como porcentaje) debe ser en el rango de 0 a 100",
+        "threshold_distance": "El valor del parámetro umbral_distancia debe estar entre el rango de 0 a 0.2",
+        "move_capacity_timeout": "El valor del parámetro capacidad_movida_tiempoacabado debe ser un entero mayor a 0",
+        "slow_capacity_share": "El valor del parámetro acción_capacidad_lenta (como porcentaje) debe estar en el rango entre 0 y 100",
+        "interest_rate": "El valor del parámetro tasa_interés (como porcentaje) debe ser mayor o igual a 0",
+        "min_deposit_term": "El valor del parámetro depósito_min_periodo debe ser un entero mayor o igual a 0",
+        "challenging_period": "El valor del parámetro período_desafiante debe ser un entero mayor o igual a 0",
+        "challenge_immunity_period": "El valor del parámetro período_inmunidad_desafio debe ser un entero mayor o igual a 0",
+        "reporter_share": "El valor del parámetro acción_reportera (como porcentaje) debe estar en el rango entre 0 y 100"
+      },
+      "title": "Cambiar {{param}}",
+      "add_support": "Añadir soporte",
+      "vote": "Votar",
+      "your_support_value": "Tu apoyo en favor de",
+      "param_value": "Valor de parámetro",
+      "your_balance": "Tu balance actual en la gobernación AA",
+      "add_more": "Añadir más (opcional)",
+      "count_tokens": "Número de {{symbol}}",
+      "your_supported_value": "Tu valor apoyado es",
+      "total_support": "Apoyo total para este valor",
+      "your_support": "Tu apoyo a este valor"
+    },
+    "edit_recipient": {
+      "title": "Editar recibidor de interés",
+      "select": "Seleccionar recibidor de interés",
+      "new_address": "Dirección del nuevo recibidor de interés",
+      "add_your_own": "Añade el tuyo",
+      "me": "Yo"
+    },
+    "open_deposit": {
+      "title": "Depósito abierto",
+      "amount": "Cantidad de T2 ({{symbol}})",
+      "will_receive": "en 30 días recibirás ~{{count}} monedas estables",
+      "will_receive_plural": "en 30 días recibirás ~{{count}} monedas estables"
+    },
+    "oracle_info": {
+      "title": "Info del Oracle",
+      "address": "Dirección",
+      "name": "Nombre",
+      "desc": "Descripción",
+      "no_desc": "no descripción",
+      "no_info": "No hay información sobre este oracle"
+    },
+    "redeem-both": {
+      "amount": "Monto de {{symbol}}",
+      "send_execute": "Enviar {{count}} {{symbol}} y ejecutar",
+      "send_execute_plural": "Enviar {{count}} {{symbol}} y ejecutar",
+      "send": "Enviar {{count}} {{symbol}}",
+      "send_plural": "Enviar {{count}} {{symbol}}",
+      "withdraw_all_label": "Retirar todos los cambios al ejecutar",
+      "expect_values": "Valores esperados (monedas en el agente intermedio más monedas en los campos)",
+      "total": "Total {{symbol}} en el agente intermediario",
+      "count_to_redeem": "Cuenta {{symbol}} para canjear",
+      "you_get": "Recibirás {{count}} {{symbol}}",
+      "you_get_plural": "Recibirás {{count}} {{symbol}}",
+      "withdraw_all": "Retirar todo",
+      "create_title": "Estamos esperando a que la transacción se estabilice",
+      "create_title_action": "Crear un agente intermedio",
+      "create_btn": "Crear un agente intermedio",
+      "info": "La dirección desde la que se enviará la solicitud será el propietario del agente intermediario.",
+      "modal_title": "Canjear simultáneamente",
+      "desc": "Para <1>simultáneamente</1> canjear {{symbol1}} y {{symbol2}}, necesitas<7><0> crear un Agente Autónomo</0><1>enviar {{symbol1}} y {{symbol2}} al AA intermediario en dos transacciones separadas. </1></7><8>Una vez que el AA haya recibido ambas monedas, los canjeará automáticamente en tal proporción que la comisión sea 0. Luego, podrás retirar la cantidad excedente de la moneda ({symbol1 || \"T1\"} o {symbol2 || \"T2\"}) que no fue completamente canjeada.</8>",
+      "add_title": "Añadir monedas",
+      "github": "Abrir página de github con el código fuente AA"
+    },
+    "select_wallet": {
+      "title": "Seleccionar billetera"
+    },
+    "supportList": {
+      "title": "Colaboradores"
+    },
+    "withdraw_interest": {
+      "desc": "<0>Confirma el retiro de <1></1> {{symbol3}}. El depósito seguirá recibiendo interés como antes.</0>",
+      "btn": "Retirar interés"
+    },
+    "withdraw": {
+      "title": "Retirar apoyo",
+      "withdraw": "Retirar",
+      "amount_info": "Deja vacío si quieres retirar la cantidad entera",
+      "amount_placeholder": "Monto de retiro (Max:{{max}})"
+    },
+    "withdraw_protection": {
+      "title": "Retirar protección del depósito",
+      "withdraw_protection": "Retirar protección",
+      "max_withdrawal": "Max. retiro",
+      "ratio": "Relación de protección"
+    }
+  },
+  "buy": {
+    "title_btc": "Comprar monedas de interés con BTC",
+    "desc_v2": "Comprar monedas ganadoras de interés (IUSD, IBIT, etc) por BTC en un paso sencillo.",
+    "exchange_success": "El intercambio se añadió exitosamente a la lista y espera por el pago",
+    "exchange_error": "Un error ocurrió, por favor intenta de nuevo más tarde",
+    "exchange_warning": "Servicio de intercambio de {{currency}}-a-RECH está temporalmente no disponible, por favor paga con RECH o intenta de nuevo más tarde.",
+    "you_send": "Tú <1>envías</1>",
+    "amount": "Cantidad",
+    "currency_to_pay": "Moneda a pagar",
+    "you_get": "Tú <1>obtienes</1>",
+    "will_receive": "La moneda que recibirás",
+    "first_exchanged": "Tu <1>{{activeCurrency}}</1> será intercambiada primero por RECH, luego RECH convertidos a {{symbol}}. El intercambio entre <8>{{activeCurrency}}</8> a RECH es hecho por <12>{{providerName}}</12>.",
+    "compensates": "rechain_inc compensa parte de las comisiones del exchange (casa de cambio).",
+    "compensates_depleted": "rechain_inc compensa parte de las comisiones del exchange, pero la cuota de hoy ya está agotada y el precio estimado incluye todas las comisiones. Para tener una tasa mejor, intenta de nuevo después que la cuota se reinicie a medianoche UTC o compra con RECH ahora.",
+    "install": "<0>Instala la billetera de rechain_inc</0> si no tienes una todavía, y copia/pega tu dirección aquí.",
+    "buy": "Comprar",
+    "volatility": "1% fue añadido para proteger contra la volatilidad del precio, obtendrás esta cantidad de vuelta si el precio no cambia.",
+    "open_wallet": "Clickear en “Comprar” abrirá tu billetera rechain_inc. <1>Instalala</1> si no tienes una todavía.",
+    "min": "Lo sentimos, la cantidad mínima de {{activeCurrency}} es {{min}}. Por favor incrementa la cantidad de {{activeCurrency}}.",
+    "buying_v2": "Para comprar monedas estables (OUSD, OBIT, etc.), monedas de fondos (SFUSD, SFGB, etc), y canjear, ve a la <2>página de comercio</2>.",
+    "updated": "Esta página se actualizará automáticamente",
+    "status": "Estado",
+    "status_loading": "cargando estado...",
+    "send_to_address": "Enviar <1>{{currency_from}}</1> a la dirección: ",
+    "recipient_address": "Dirección recibidora",
+    "currently_converting": "Actualmente convirtiendo <1>{{currency_from}}</1> a RECH, este paso lo lleva a cabo {{providerName}}. Para temas de soporte, por favor contáctalos en su <5>página de soporte</5>.",
+    "go_back": "Ir atrás al formulario"
+  },
+  "create": {
+    "next": "Siguiente",
+    "received": {
+      "title": "Petición recibida",
+      "subTitle": "Una vez que la transacción es estable, serás redireccionado a la página de la nueva moneda estable",
+      "close": "Cerrar"
+    },
+    "sending_request": {
+      "title": "¡Casi listo!",
+      "subTitle": "Por favor haz click en el botón «Crear» debajo, este abrirá tu billetera rechain_inc y enviarás una transacción que creará la nueva moneda estable.",
+      "create": "Crear",
+      "reset": "Reiniciar"
+    },
+    "edit_oracles": "editar oracles",
+    "last_posted": "Último precio publicado por el Oracle ",
+    "target_price": "Precio objetivo",
+    "check": "Chequear oracles",
+    "allow": "permitir",
+    "disallow": "rechazar",
+    "title": "Crear",
+    "de_desc": "El motor de decisiones interviene automáticamente cuando es necesario devolver el precio de vuelta a la fijación. Se crea un Fondo de Estabilidad para que esto sea posible, el Fondo mantiene todas las monedas de crecimiento, y los inversores compran acciones en el Fondo.",
+    "steps": {
+      "curve": "Curva",
+      "capacitor": "Capacitor",
+      "governance": "Gobernación",
+      "decision": "Motor de decisiones",
+      "create": "Crear"
+    },
+    "setting": "Establecer parámetro",
+    "sending": "Enviar una petición",
+    "required": "Campo requerido"
+  },
+  "params": {
+    "leverage": {
+      "name": "Apalancamiento",
+      "desc": "Apalancamiento aplicado a la Moneda2. Usa 0 (el predeterminado) para traquear el precio del oracle. Usa valores positivos para crear un activo que representa posiciones largas apalancadas en el activo de reserva, valores negativos para posiciones cortas apalancadas."
+    },
+    "decimals1": {
+      "name": "Decimales 1",
+      "desc": "Decimales de Moneda1 (moneda de crecimiento)"
+    },
+    "decimals2": {
+      "name": "Decimales 2",
+      "desc": "Decimales de la Moneda2 (moneda de interés, o moneda estable si el interés es 0)"
+    },
+    "reserve_decimals": {
+      "name": "Decimales de reserva",
+      "desc": "Decimales de las unidades del activo de reserva."
+    },
+    "m": {
+      "desc": "Poder m en la curva de unión r=s<1>1</1> <2>m</2> s<4>3</4><5>n</5>"
+    },
+    "n": {
+      "desc": "Poder n en la curva de unión r=s<1>1</1> <2>m</2> s<4>2</4><5>n</5>"
+    },
+    "reserve_asset": {
+      "name": "Activo de reserva",
+      "desc": "Activo usado como reserva para respaldar la emisión de Moneda1 y Moneda2. RECH es la predeterminada."
+    },
+    "interest_rate": {
+      "name": "Tasa de interés",
+      "desc": "Tasa de interés que Moneda2 gana sobre la moneda estable. Tipo 0.1 por 10%."
+    },
+    "moved_capacity_share": {
+      "name": "Acción de capacidad movida",
+      "desc": "Parte del capacitor lento que es movido al capacitor rápido después de expirar el tiempo."
+    },
+    "fee_multiplier": {
+      "name": "Multiplicador de comisión",
+      "desc": "El multiplicador usado para calcular las comisiones cobradas por mover el precio alejado de la fijación. Mientras más grande es el multiplicador, más grandes sin las comisiones pagadas por usuarios por mover el precio fuera de fijación."
+    },
+    "move_capacity_timeout": {
+      "name": "Tiempo expirado de mover capacidad",
+      "desc": "Cuanto esperamos (en segundos) antes de mover parte de la capacidad lenta hacia la rápida."
+    },
+    "threshold_distance": {
+      "name": "Distancia de umbral",
+      "desc": "Distancia de umbral desde el precio objetivo que activa la cuenta atrás antes de mover fondos desde el capacitor lento al rápido."
+    },
+    "slow_capacity_share": {
+      "name": "Acción de capacidad movida",
+      "desc": "Parte de las comisiones que va al capacitor lento. El resto va al capacitor rápido."
+    },
+    "min_deposit_term": {
+      "name": "Plazo de depósito mínimo",
+      "desc": "Plazo de depósito mínimo en segundo. Durante este periodo, el depósito no puede cerrarse."
+    },
+    "challenging_period": {
+      "name": "Período de desafío",
+      "desc": "El período en segundos cuando un intento de cierre de depósito puede ser desafiado. El depósito con la menor protección puede ser cerrado por cualquier persona, no sólo por el propietario. Un intento de cerrarlo inicia un periodo desafiante durante el cual el cierre puede ser desafiado indicando otro depósito con aún menos protección. En este caso, el reportero gana parte de la cantidad del depósito mientras que el cerrador pierde."
+    },
+    "challenge_immunity_period": {
+      "name": "Período de inmunidad del desafío",
+      "desc": "El período adicional en segundos durante el cual un depósito no puede ser utilizado para desafiar el cierre de otros depósitos. Este período se aplica después del plazo de depósito mínimo y después de la última retirada de protección del depósito menos protegido."
+    },
+    "reporter_share": {
+      "name": "Cuota reportera",
+      "desc": "La parte de la cantidad del depósito pagada a los usuarios que reportan intentos de cierre inválidos cuando un depósito a cerrar no es el menos protegido."
+    },
+    "oracles": {
+      "name": "Oracles",
+      "desc": "Los oracles que reportan el precio de la moneda estable"
+    },
+    "oracle1": {
+      "name": "Oracle 1",
+      "desc": "La dirección del oracle que reporta el precio de la moneda estable"
+    },
+    "feed_name1": {
+      "name": "Nombre del alimentador 1",
+      "desc": "Nombre del alimentador de datos del oráculo"
+    },
+    "op1": {
+      "name": "Operación 1",
+      "desc": "Cómo se interpreta el precio del oracle: utiliza '*' si el oracle reporta el precio de la moneda de reserva en términos de la moneda estable (este es el valor predeterminado). Utiliza '/' si es la inversa, e.j. el precio de la moneda estable en términos del activo de reserva."
+    },
+    "oracle2": {
+      "name": "Oracle 2",
+      "desc": "Segundo oracle opcional. Úsalo si quieres multiplicar o dividir precios de diferentes activos. Ej. para crear una moneda estable fijada a TSLA, necesitas dividir 2 alimentadores de precios: RECH/USD y TSLA/USD."
+    },
+    "feed_name2": {
+      "name": "Nombre del alimentador 2",
+      "desc": "Nombre del segundos alimentador de data del oracle."
+    },
+    "op2": {
+      "name": "Operación 2",
+      "desc": "Qué hacer con el segundo precio: multiplicar o dividir."
+    },
+    "oracle3": {
+      "name": "Oracle 3",
+      "desc": "Tercer oracle opcional, como el segundo."
+    },
+    "feed_name3": {
+      "name": "Nombre del alimentador 3",
+      "desc": "Nombre del tercer alimentador de datos del oráculo."
+    },
+    "op3": {
+      "name": "Operación 3",
+      "desc": "Qué hacer con el tercer precio: multiplicar o dividir."
+    },
+    "allow_grants": {
+      "name": "Permitir subvenciones",
+      "desc": "Si permitir el pago de subvenciones a equipos que prometen promover el uso de la moneda estable. Las subvenciones son votadas por los titulares de la Moneda2 y, si se aprueban, diluyen a los titulares de la Moneda2."
+    },
+    "allow_oracle_change": {
+      "name": "Permitir cambio de oracle",
+      "desc": "Si permitir la actualización de los oracles por los titulares de la Moneda2 votar después de que se crea la AA de la moneda estable."
+    },
+    "regular_challenging_period": {
+      "name": "Periodo de desafío regular",
+      "desc": "Período de desafío (en segundos) para los votos de los titulares de la Moneda2 sobre temas regulares."
+    },
+    "important_challenging_period": {
+      "name": "Periodo desafiante importante",
+      "desc": "Período de desafío (en segundos) para los votos de los titulares de la Moneda1 sobre temas importantes como el cambio de un oracle."
+    },
+    "freeze_period": {
+      "name": "Período de congelación",
+      "desc": "Cuánto tiempo (en segundos) se congelan las monedas de voto de los seguidores de la opción ganadora después de tomar la decisión."
+    },
+    "proposal_min_support": {
+      "name": "Apoyo mínimo a propuestas",
+      "desc": "Qué porcentaje de la oferta total de la Moneda1 debería votar a favor de una propuesta de subvención para que la propuesta sea elegible para ganar."
+    },
+    "below_peg_threshold": {
+      "name": "Por debajo del límite de la fijación",
+      "desc": "La desviación del límite del precio por debajo de la fijación que inicia una cuenta regresiva antes de la intervención del motor de decisiones"
+    },
+    "below_peg_timeout": {
+      "name": "Por debajo de la fijación tiempo expirado",
+      "desc": "Cuánto tiempo el precio tiene que permanecer por debajo de la fijación para que el motor de decisiones interfiera"
+    },
+    "min_reserve_delta": {
+      "name": "Delta de reserva mínima",
+      "desc": "Cantidad mínima de una transacción iniciada por el motor de decisiones"
+    },
+    "decision_engine_aa": {
+      "name": "Motor de decisiones AA",
+      "desc": "Agente Autónomo del Motor de Decisiones, gestiona el Fondo de Estabilidad para mantener el precio estable."
+    }
+  },
+  "faq": {
+    "questions": {
+      "0": {
+        "question": "¿Cómo compro/vendo IUSD, OUSD o SFUSD?",
+        "answer": "<0>Puedes comprar o vender las monedas por RECH en la <1>página de inicio</1>, en la <3>página de intercambio</3> más avanzada, o comprar IUSD por BTC en la <5>página de Comprar con Bitcoin</5> de este sitio web. El sitio web le ayuda a construir una solicitud que envías a un <7>Agente Autónomo</7> de tu billetera <9>rechain_inc</9>. </0><1>Algunos cambios también pueden listar las monedas para permitirte comprar/venderlos por BTC o metálico.</1>"
+      },
+      "3": {
+        "question": "¿Quién realiza la acuñación de todas estas monedas?",
+        "answer": "<0>Un puñado de agentes sin alma. Se les llama <1>Agentes autónomos</1> (AAs). Son verdaderamente autónomos que significa que nadie puede interferir en su trabajo.</0>"
+      },
+      "4": {
+        "question": "¿Los AAs son contratos inteligentes?",
+        "answer": "<0>No, no son <1>contratos inteligentes</1>. No son ni inteligentes, ni contratos, son programas tontos que siguen ciegamente las reglas inmutables.</0>"
+      },
+      "5": {
+        "question": "IUSD crece constantemente gracias a los intereses. Asumiendo que esto atrae a nuevos usuarios, GRD también debería crecer y ganan ambos titulares de monedas, ¿quién pierde entonces?",
+        "answer": "<0>No es una suma cero. En la curva de unión que se utiliza para emitir las monedas, el valor total de las monedas es mayor que el valor de la reserva que se invirtió inicialmente para crearlas. Así que, sí, es posible que cada grupo gane en términos del valor de sus activos, y no a expensas del otro grupo. </0>"
+      },
+      "6": {
+        "question": "¿Este sistema se ejecuta en un blockchain?",
+        "answer": "<0>No. Funciona en un editor distribuido basado en DAG (Acyclic Graph). </0><1>Un blockchain sería significativamente menos adecuado para una moneda estable como este porque las blockchains tienen bloques y mineros. Los mineros podrían manipular el orden de las transacciones dentro de un bloque con el fin de colocar su propia transacción ante de la tuya para que recibas un precio peor al comprar de una curva de unión o vender a ella. Incluso los no mineros pueden afectar el orden de las transacciones dentro de un bloque ofreciendo una comisión ligeramente más alta a un minero (que funciona como un soborno). Esto podría exponer a los usuarios a una incertidumbre significativa, riesgos y pérdidas.</1><2>Las Monedas estables vinculadas funcionan en <1>rechain_inc</1> — un editor DAG sin mineros. En un DAG estos trucos no funcionan. No hay mineros, no hay bloques, las posiciones de las transacciones en el DAG no pueden ser cambiadas por nadie, y es imposible para cualquier actor manipular el orden de las transacciones. </2>"
+      },
+      "7": {
+        "question": "¿Qué hace que las monedas estables estén fijadas a su referencia?",
+        "answer": "<0>El precio de IUSD es \"atraído\" al objetivo (referencia) con la ayuda de un así llamado capacitor. </0><1>Cada compra de IUSD de la curva de unión y cada venta a la curva de unión afecta al precio de IUSD. Si una transacción empuja el precio lejos del objetivo, es \"castigado\" con una comisión, cuanto más lejos esté el objetivo, más la comisión. Las tasas recogidas se acumulan en un capacitor. Cada transacción que corrige el precio de vuelta al objetivo, es recompensada usando los fondos acumulados en el capacitor. </1><2>Además, el fondo de estabilidad compra o vende la otra moneda — GRDV2 — con el fin de corregir el precio de vuelta a la fijación. Cuándo y cuánto compra o vende el fondo, está determinado por un algoritmo que sólo puede ser modificado mediante la decisión de gobernación de los dueños de SFUSD. </2><3>Además de eso, los operadores que anticiparon que el fondo eventualmente corregiría el precio, pueden beneficiarse de la compra o venta de IUSD antes de que el fondo intervenga. Sus operaciones hacen que el precio se acerque más a la fijación y podrían hacer que la intervención del fondo fuera innecesaria. </3><4>Lee el <1>artículo de blog de introducción de monedas estables</1> y <3>actualizaciones introducidas en las monedas estables versión 2</3> para más detalles.</4>"
+      },
+      "8": {
+        "question": "¿Cuáles son los riesgos?",
+        "answer": "<0>Esta es una nueva tecnología no probada y podría no funcionar como se esperaba. Aunque hicimos todo lo posible para evitar errores al implementar el sistema y analizar los incentivos de los diferentes grupos de usuarios, no se pueden excluir errores técnicos ni conclusiones erróneas sobre el comportamiento del usuario en algunas circunstancias. Nada de esto se ha hecho antes y por desgracia no pudimos ganar mucho con la experiencia de los predecesores.</0>"
+      },
+      "9": {
+        "question": "¿Cómo son las monedas estables vinculadas diferentes de DAI, USDT, USDC, etc?",
+        "answer": "<0>Uno puede ganar intereses con monedas estables vinculadas. Cuando no se utilizan monedas estables OUSD, se pueden \"apostar\" convirtiéndolas a IUSD cuyo precio objetivo crece constantemente. Después de un tiempo, uno puede convertir IUSD de vuelta a OUSD y obtener más OUSD a cambio, lo que refleja el interés ganado mientras se apostaba OUSD.</0>"
+      },
+      "10": {
+        "question": "¿Cómo se comparan las monedas estables vinculadas con las monedas estables de descuento?",
+        "answer": "<0>Las monedas estables vinculadas es nuestra próxima generación de diseño de monedas estables y mejora por encima de <1>monedas estables descontadas</1> en virtualmente todas las dimensiones. En particular:</0><1><0>- las monedas estables vinculadas ya no caducan, son para siempre. </0><1>- OUSD es verdaderamente estable, no hay apreciación, apunta a la familiar y bien establecida unidad de cuenta, USD. </1><2>- Ya no hay subastas y los usuarios no necesitan cuidar de sus préstamos y rellenar garantías o arriesgan perder su garantía cuando su precio cae abruptamente. </2><3>- ya no hay exceso de colateralización, lo que normalmente era malentendido. </3><4>- no hay necesidad de equilibrar los riesgos con la cantidad de capital desperdiciado en exceso de garantía.</4></1>"
+      },
+      "11": {
+        "question": "¿Puedo operar con apalancamiento?",
+        "answer": "<0>Sí. Tendrás que crear una moneda estable apalancada o usar una que otra persona ya ha creado. </0><1>Una moneda estable apalancada es una moneda sintética que rastrea el precio de un activo a la potencia de 2 (para apalancamiento de 2x), 3 (para apalancamiento de 3x), -1 (para una posición corta), -2 (para una posición corta apalancada de 2x), etc. </1><2>Por ejemplo, mientras el Crudo Brent vale $40, una moneda estable de apalancamiento 2x BRENT2/USD vale 1600. Si el Brent sube 25% a $50, BRENT2/USD sube a 2500 — a 56.25% de ganancia.</2><3>Podría parecer inusual llamar a esas monedas \"monedas estables\" pero son estables en relación a un \"precio\" artificial como el Brent cuadrado. Al final, todo es relativo, incluida la estabilidad.</3><4>Cuando <2>creas una nueva moneda estable</2>, necesitas especificar el parámetro de apalancamiento deseado. Es 0 por defecto, lo que para el alimentador de precio RECH/USD significa rastrear el precio del USD. El apalancamiento 1 significaría una posición simple y larga en RECH (que es equivalente a mantener la moneda de reserva RECH), apalancamiento 2 significaría 2x posición apalancada en RECH vs USD, apalancamiento 3 — 3x posición larga en RECH, apalancamiento -1 — posición corta en RECH, y así sucesivamente. </4><5>Ten en cuenta que con este tipo de apalancamiento, no puedes ser llamado a un ajuste de margen y liquidado.</5><6>Para más detalles, visita <1>nuestro blog introduciendo monedas estables descontadas</1> .</6>"
+      },
+      "12": {
+        "question": "Quiero intercambiar una moneda estable vinculada al activo X pero no existe",
+        "answer": "<0>Si ya existe un oracle que publica el precio de X, ¡puedes <1>crear la moneda estable correspondiente</1>enseguida! </0><1>Si aún no hay tal oracle - crea el oracle. No obstante, tienes que ser un desarrollador. Hay fuentes de <1>ejemplo oracle</1> para ayudarte a empezar. Si no eres un desarrollador y no puedes contratar uno, indica tu demanda en el <3>Discord de rechain_inc</3>.</1>"
+      },
+      "13": {
+        "question": "¿Qué es el Fondo de Estabilidad y el Motor de Decisiones?",
+        "answer": "<0>En monedas estables v2, se utilizan para mantener automáticamente el precio cerca de la fijación. </0><1>El Motor de Decisiones (DE) es un Agente Autónomo que utiliza los fondos del Fondo de Estabilidad para corregir el precio comprando o vendiendo monedas de crecimiento. El Fondo de Estabilidad es otro AA que sólo guarda todos las monedas de crecimiento y activos en la moneda de reserva aportados por los inversores. Los inversores obtienen a cambio acciones del fondo. </1><2>Puesto que el fondo guarda monedas de crecimiento como parte de sus activos, y se aprecian a medida que se emiten monedas de interés (estable+), comprar acciones del fondo es una forma de apostar al crecimiento de la moneda estable compañera. </2><3>El DE (motor de decisiones) puede ser reemplazado por la gobernación tanto para optimizar su comportamiento como para mantener mejor la fijación y generar un mayor valor del accionista.</3>"
+      },
+      "14": {
+        "question": "¿Se puede apostar OUSD?",
+        "answer": "<0>Sí, simplemente conviértelo a IUSD. En cualquier momento más tarde, puedes vender IUSD de vuelta a OUSD y obtener más OUSD.</0>"
+      }
+    },
+    "action": "¿Alguna otra pregunta? Lee el <1>artículo introductorio </1> o haz una pregunta en <3>Discord</3>."
+  },
+  "home": {
+    "built_on_rechain_inc": {
+      "title": "Hecho en rechain_inc",
+      "info": "<0>Todas estas monedas se emiten en <1>rechain_inc</1> — una de las primeras redes de criptos basadas en DAG funcionando desde 2016. rechain_inc es el primer DAG <3>descentralizada completamente</3> y el primer DAG que soporta dapps, DeFi en particular. </0><1>El equipo rechain_inc ha desarrollado varios productos únicos como <1>textcoins</1> (que permiten enviar criptomonedas al correo electrónico), <3>identidad autosoberana</3>, moneda imposible de rastrear <5>blackbytes</5>, y muchos otros. Los Monedas estables vinculadas también fueron desarrollados por el equipo rechain_inc y son un tipo completamente nuevo de monedas estables que se basan en curvas de unión — mira <7>cómo funciona</7>. </1>",
+      "not_blockchain": "<0>Usando un DAG en lugar de blockchain, las monedas estables vinculados evita los problemas de la cadena de bloques tales como ataques que ejecutan frontalmente: tanto el frontral por los mineros como el frontal por los usuarios sobornando a los mineros con comisiones — simplemente no hay mineros u otros intermediarios en un DAG. </0>"
+    },
+    "header": {
+      "title": "Monedas estables vinculadas",
+      "desc": "Las monedas estables más avanzadas alimentadas por curvas de unión"
+    },
+    "liquidity": {
+      "title": "Gana dinero con la provisión de liquidez",
+      "info": "<0>Agrega estas monedas a las piscinas de liquidez en <1>Oswap</1> y gana gracias a las comisiones de cambio. Algunas piscinas de liquidez son elegibles para obtener recompensas adicionales, ver <3>liquidez.rechain_inc.org</3>.</0><1>Las recompensas adicionales son actualmente de alrededor de <1>{{percent}}% APY</1>, pagadas semanalmente.</1>"
+    },
+    "popular": {
+      "pegged": "Pegged:",
+      "price": "Precio:",
+      "buy": "Comprar",
+      "title_fund": "Monedas de fondos más populares",
+      "title_interest": "Monedas de portación de interés más populares",
+      "title_stable": "Monedas estables más populares"
+    },
+    "reasons": {
+      "title": "007 razones por las que las monedas estables vinculadas son las mejores monedas estables de la historia",
+      "info": {
+        "0": "100% cripto respaldadas: no hay necesidad de confiar en ningún custodio o intermediario.",
+        "1": "No hay sobre colateralización: pagas 1 USD de valor de RECH para obtener 1 USD de valor de monedas estables, claro y simple.",
+        "2": "Viven en un DAG: sin mineros, sin bloques, sin manipulación de mineros, sin sobornar a los mineros con comisiones.",
+        "3": "Ellos pagan intereses: hay monedas de pago de intereses y de apuestas junto con las monedas estables.",
+        "4": "Hay un grupo de personas —los dueños de SFUSD— que tienen piel en el juego ya que su riqueza depende del éxito del ecosistema. Son capaces de tomar decisiones de gobierno que mantendrían las monedas estables estables, líquidas y ampliamente utilizadas.",
+        "5": "Sobreviven a cualquier volatilidad, incluso a grandes movimientos abruptos del precio de los activos de reserva. No llamadas al margen, no liquidaciones.",
+        "6": "¡Tienen un nombre genial!"
+      }
+    },
+    "tokens": {
+      "interest": {
+        "title": "IUSD — moneda de interés que gana un 16% de interés en USD",
+        "follow": "<0>IUSD es para inversores que buscan ingresos predecibles.</0><1>Su precio está programado para seguir el precio objetivo en crecimiento. Comenzó exactamente en 1 USD el 16 de abril de 2021 y el precio objetivo de la ficha crece al 16 % anual. En un año, se espera que sea de $1.16, en dos años — $1.3456. Es una <1>moneda </1>estable+.</1>"
+      },
+      "stable": {
+        "title": "OUSD — una moneda vinculada al USD",
+        "payments": "<0>OUSD es una unidad familiar de cuenta más adecuada para pagos. </0><1>A diferencia de USD, se puede mover libremente y al instante a través de las fronteras, y las comisiones son fracciones de centavo.</1>",
+        "programmed": "<0>Su precio está programado para permanecer cerca de 1 USD.</0>",
+        "exchange": "<0>Puedes “apostar” OUSD convirtiéndola a IUSD. En cualquier momento más tarde, puedes hacer una conversión inversa y obtener más OUSD a cambio.</0>"
+      },
+      "fund": {
+        "title": "SFUSD — moneda de crecimiento y gobernación",
+        "risks": "<0>SFUSD es para inversores que buscan mayores ingresos, con mayores riesgos. </0><1>Monedas SFUSD son acciones en el fondo de estabilidad que se gestionan programáticamente para mantener el precio de IUSD cerca de la fijación. </1><2>El precio de SFUSD depende de la popularidad de IUSD. A medida que se emiten más monedas IUSD, el precio de SFUSD crece programáticamente — esto se desprende de las mecánicas de la curva de unión. Cuando las monedas IUSD son canjeadas, SFUSD cae en precio.</2>",
+        "vote": "<0>Los dueños de SFUSD pueden votar para ajustar la tasa de interés y varios parámetros del ecosistema que son importantes para mantener la fijación. Pueden votar para reemplazar el programa, llamado Motor de Decisiones (DE), que administra el fondo. Los dueños de SFUSD pueden incluso votar para contratar un equipo de administración encargado de promover el uso de OUSD — lo que afecta directamente el precio de SFUSD.</0>"
+      }
+    }
+  },
+  "how_it_works": {
+    "title": "Cómo funciona",
+    "agents": "<0>Todo esto está operado por varios <1><0>Agentes Autónomos</0></1> que son programas que funcionan en <3>rechain_inc</3> editor distribuido, hacen las matemáticas rápidamente (son buenos en matemáticas, a diferencia de algunas personas), y nunca pueden ser cambiados por nadie. </0><1>Todas las transacciones son transparentes, rápidamente verificadas por varios computadores operados de forma independiente, y nunca pueden ser revertidas. No hay seres humanos falibles que puedan interferir en el trabajo de los Agentes Autónomos, ningún banquero fraudulento que pueda huir con tu dinero, perderlo por una mala inversión o pagarlo a ellos mismos como una bonificación trimestral. Las monedas no se pueden imprimir a voluntad, se emiten estrictamente en contra de la reserva, estrictamente de acuerdo con la fórmula arriba mencionada. La reserva es almacenada por un agente autónomo y sólo puede ser retirada a cambio de las monedas, de nuevo estrictamente de acuerdo a la fórmula de la curva de unión. </1>"
+  },
+  "how_it_works_v2": {
+    "desc": "Hay alguna matemática detrás de todo esto. La moneda estable vinculada al USD opera en función de dos monedas principales — IUSD y GRDV2 — que existen en una <1>curva de unión</1>, que es una fórmula matemática que conecta las cantidades de las monedas IUSD y GRDV2 emitidas con la cantidad de la moneda de reserva <5>— Bytes — </5> utilizada para emitirlas.",
+    "formula": "La fórmula es como: <2><0>r</0> = <2>s</2><3>1</3><4>2</4> <6>s</6><7>2</7><8>2</8></2>,",
+    "where": "donde:<1><0>- <1>r</1> es la cantidad total de reserva RECH bloqueada para emitir ambas monedas; </0><1>- <1>s</1><2>1</2> es el suministro total de moneda1 — GRDV2;</1><2>- <1>s</1><2>2</2> es el suministro total de moneda2 — IUSD. </2></1>",
+    "curve": "<0>Es decir, para emitir más monedas GRDV2 o IUSD, es necesario bloquear alguna reserva en RECH, y cuando se quiere canjear GRDV2 o IUSD, se recibe una parte de la reserva de vuelta. Los precios de GRDV2 y IUSD, por ejemplo cuánta reserva se necesita pagar por moneda, o puede recuperarse por moneda, depende de los suministros actuales de las monedas. </0><1>El precio de la moneda1 (GRDV2) es <1><0>p</0><1>1</1> = <3>2</3> <5>s</5><6>1</6> <8>s</8><9>2</9><10>2</10></1></1><2>El precio de la moneda2 (IUSD) es <1><0>p</0><1>2</1> = <3>2</3> <5>s</5><6>1</6><7>2</7> <9>s</9><10>2</10></1></2><3> Los mecanismos de estabilidad están diseñados para mantener el precio <1>p</1><2>2</2> de IUSD cerca de su precio objetivo conocido del precio RECH/USD reportado por un oráculo que alimenta los datos de las bolsas de criptomonedas y el tiempo transcurrido desde el lanzamiento de la moneda estable. </3>",
+    "mechanisms": "Hay 3 mecanismos que mantienen el precio cerca del objetivo:",
+    "title_capacitor": "1. El capacitor",
+    "capacitor": "Siempre que alguien quiera comprar o vender IUSD tal que esta transacción aleje el precio IUSD del objetivo, tendrá que pagar una comisión. Cuanto más lejos del objetivo, más grande será la comisión. Las tasas se acumulan en una reserva especial que se llama capacitor. Cada vez que alguien empuja el precio más cerca del objetivo, obtiene una recompensa, que se paga del capacitor. De esta manera, el capacitor incentiva las operaciones que corrigen el precio, y no incentiva las operaciones que alejan el precio del objetivo.",
+    "title_fund": "Fondo de estabilidad",
+    "fund": "El fondo guarda la totalidad del suministro de GRDV2 y parte de la cantidad de la moneda reserva RECH que fue aportada por los inversores. El fondo es administrado algoritmicamente por un Agente Autónomo llamado <1>Motor de Decisiones</1>, que pueden usar RECH y GRDV2 del fondo para comprar o canjear GRDV2 para cambiar su oferta <3>s</3><4>1</4> y así cambiar el precio <6>p</6><7>2</7> de vuelta al objetivo. Los inversores compran acciones SFUSD en el fondo aportando RECH a sus reservas. Lo hacen anticipándose a que las acciones apreciarían gracias al crecimiento de la emisión de IUSD que eleva el valor de lo que el fondo guarda de GRDV2.",
+    "title_trader": "3. Incentivos del Comerciante",
+    "trader_incentives": "Sabiendo que el Fondo de Estabilidad eventualmente intervendría y corregiría el precio de vuelta al objetivo, los operadores pueden obtener ganancias comprando o vendiendo antes que el Fondo. Por ejemplo, ellos pueden comprar IUSD cuando se cambia a menos que el objetivo anticipando que el precio pronto aumentará hasta el objetivo y tendrán la oportunidad de vender más alto. Al comprar o vender antes que el Fondo, mueven el precio al objetivo y hacen innecesaria la intervención del Fondo.",
+    "read": "Lee una introducción <1>más completa a las monedas estables vinculadas</1> en nuestro blog y <3>actualizaciones introducidas en las monedas estables versión 2</3>."
+  },
+  "reg_symbol": {
+    "available": "El nombre de símbolo {{value}} está disponible, puedes registrarlo",
+    "taken": "Este nombre de moneda ya está en uso. Esto iniciará una disputa",
+    "title": "Registrar símbolos",
+    "step_growth": "Símbolo para moneda de crecimiento",
+    "step_interest": "Símbolo para moneda de interés",
+    "step_stable": "Símbolo para monedas estables",
+    "step_fond": "Símbolo para monedas de fondos",
+    "taken_desc": "Esta moneda estable ya tiene un símbolo {{symbol}} asignado a ella. Intentar asignar un nuevo símbolo iniciará un proceso de disputa que puede tardar más de 30 días. El símbolo que obtiene más apoyo (en términos de depósitos RECH) finalmente gana.",
+    "symbol": "Símbolo",
+    "placeholder_support": "Apoyar (Monto mínimo 0.1 GB)",
+    "placeholder_desc": "Descripción de un activo (hasta 140 caracteres)",
+    "check_availability": "Comprobar disponibilidad",
+    "register": "Registrar",
+    "register_anyway": "Registrar de todos modos",
+    "skip": "Omitir"
+  },
+  "ref": {
+    "address": "Dirección",
+    "usd_balance": "Saldo USD",
+    "title": "Programa de Referidos",
+    "next_payment": "El próximo pago será el ",
+    "expected_reward": "Tu recompensa esperada es",
+    "you_were_referred": "Has sido recomendado por {{referrer_address}} y esto incluye una recompensa por tu propio saldo {{balance}}.",
+    "your_link": "Este es tu enlace de referidos",
+    "clipboard_link": "Tu enlace se ha copiado al portapapeles",
+    "no_auth": "Para obtener un enlace de referidos, <1>añade tu dirección de billetera</1>",
+    "your_link_desc": "Utilízalo en tus blogs, tweets, publicaciones, boletines, perfiles públicos, videos, etc y gana recompensas por traer nuevos titulares a monedas estables vinculadas.",
+    "info": "<0>Las recompensas por referencia se pagan en IUSD cada domingo y son proporcionales a los saldos en dólares de los usuarios referidos en todas las monedas (monedas estables, monedas de interés, monedas de crecimiento) emitidas en este sitio web, así como otras monedas basadas en ellas: acciones en <1>oswap</1> pisicinas de liquidez y acciones en bots de arbitraje. Cuanto mayor sea el saldo total al final del período semanal, mayor será la recompensa. Tu recompensa semanal aumenta si los usuarios referidos son más, y disminuye si canjean o venden sus monedas. </0><1>La recompensa semanal actual es <1>{{pReferrerRewards}}% del saldo de todos los usuarios referidos</1> al final de la semana (<3>{{pReferrerRewardsAPY}}% por año</3>). </1><2>Tus referidos también reciben recompensas por comprar monedas a través de tu enlace — se espera que obtengan <1>{{pReferralRewards}}% de sus balances</1> cada semana. </2><3>El monto total pagado a todos los que refieren y usuarios referidos es <1>3,000$ semanalmente</1> y se distribuye en proporción a los saldos de referidos.</3>",
+    "title_list": "Aquí está la lista de tus referidos y sus balances actuales",
+    "total": "Total",
+    "empty": "no hay referidos aun"
+  },
+  "stableplus": {
+    "title": "Monedas estables+",
+    "sub_title_1": "Monedas estables que ganan interés",
+    "sub_title_2": "Mejor para los inversores que buscan ingresos predecibles",
+    "programmed": "<0>Los precios de las monedas <1>estables+</1> están programados para seguir el precio objetivo creciente. Por ejemplo, IUSD — una moneda vinculada al USD— comenzó exactamente a 1 USD el 16 de abril. 2021 y el precio objetivo de la ficha crece a un 16% anual. En un año, se espera que sea de 1.16$, en dos años — 1.3456$.</0>",
+    "curve": "<0>Esto es posible gracias a una curva de unión que vincula matemáticamente sus precios con los precios de las monedas de <1>crecimiento</1> compañeras. Cada desviación del precio objetivo activa incentivos para los operadores de monedas estables+ que los hacen comprar o vender las monedas, además hay un <3>fondo de estabilidad</3> que compra y vende las monedas de crecimiento para cambiar el precio. Ambos corrigen eventualmente el precio de la moneda estable+ de vuelta al objetivo. Lo hacen para obtener una ganancia.</0>",
+    "stake": "<0>Si recibes OUSD — una moneda estable vinculada al USD, puedes \"apostar\" convirtiéndola a IUSD y guardando IUSD. En cualquier momento más tarde, puedes convertir IUSD de vuelta a OUSD y obtener más OUSD a cambio, más de lo que originalmente invertiste.</0>",
+    "choose": "Elige tu moneda estable+"
+  },
+  "notification": {
+    "create": {
+      "req_author": "Has enviado una solicitud para crear una nuevo moneda estable fijada a {{feed_name}} con interés de {{interest_rate}}%",
+      "req": "Otro usuario envió una solicitud para crear una nueva moneda estable vinculada a {{feed_name}} con un interés de {{interest_rate}}%",
+      "res": "La stablecoin que creaste está lista para usarse, ve a ella?",
+      "yes": "Si",
+      "no": "No"
+    },
+    "bonded": {
+      "buy": {
+        "req_author": "Has enviado una solicitud para comprar {{tokens1}} {{tokens2}}",
+        "req": "Otro usuario envió una solicitud para comprar {{tokens1}} {{tokens2}}"
+      },
+      "redeem": {
+        "req_author": "Has enviado una solicitud para canjear {{tokens}}",
+        "req": "Otro usuario envió una solicitud para canjear {{tokens}}"
+      },
+      "move_capacity": {
+        "req_author": "Has enviado una solicitud para mover la capacidad desde la piscina lenta a la rápida",
+        "req": "Otro usuario ha enviado una solicitud para mover la capacidad de una piscina lenta a una piscina rápida"
+      }
+    },
+    "de": {
+      "fix": {
+        "req_author": "Has enviado una solicitud para arreglar el precio",
+        "req": "Otro usuario envió una solicitud para arreglar el precio"
+      },
+      "buy": {
+        "req_author": "Has enviado una solicitud para comprar {{symbol}} por {{amount}} {{reserve_symbol}}",
+        "req": "Otro usuario envió una solicitud para comprar {{symbol}} por {{amount}} {{reserve_symbol}}"
+      },
+      "sell": {
+        "req_author": "Has enviado una solicitud para canjear {{amount}} {{symbol}}",
+        "req": "Otro usuario envió una solicitud para canjear {{amount}} {{symbol}}"
+      }
+    },
+    "deposits": {
+      "change_recipient": {
+        "req_author": "Ha enviado una solicitud para cambiar el destinatario de interés",
+        "req": "Otro usuario envió una solicitud para cambiar el porcentaje destinatario"
+      },
+      "add_protection": {
+        "req_author": "Has enviado una solicitud para añadir protección",
+        "req": "Otro usuario envió una solicitud añadir protección"
+      },
+      "withdraw_protection": {
+        "req_author": "Has enviado una solicitud para retirar protección",
+        "req": "Otro usuario envió una solicitud para retirar protección"
+      },
+      "force_close": {
+        "req_author": "Has enviado una solicitud para desafiar un cierre de fuerza",
+        "req": "Otro usuario envió una solicitud para desafiar un cierre de fuerza"
+      },
+      "commit_force_close": {
+        "req_author": "Has enviado una solicitud para confirmar un cierre de fuerza",
+        "req": "Otro usuario envió una solicitud para confirmar un cierre de fuerza"
+      },
+      "close_deposit": {
+        "req_author": "Has enviado una solicitud para cerrar un depósito",
+        "req": "Otro usuario envió una solicitud para cerrar un depósito"
+      },
+      "receive_interest": {
+        "req_author": "Has enviado una solicitud para recibir interés",
+        "req": "Otro usuario envió una solicitud para recibir interés"
+      },
+      "open": {
+        "req_author": "Has enviado una solicitud para abrir un Depósito",
+        "req": "Otro usuario envió una solicitud para abrir un Depósito"
+      },
+      "buy_stable": {
+        "req_author": "Has enviado una solicitud para comprar {{count}} {{symbol}}",
+        "req_author_plural": "Has enviado una solicitud para comprar {{count}} {{symbol}}",
+        "req": "Otro usuario envió una solicitud para comprar {{count}} {{symbol}}",
+        "req_plural": "Otro usuario envió una solicitud para comprar {{count}} {{symbol}}"
+      },
+      "sell_stable": {
+        "req_author": "Has enviado una solicitud para vender {{count}} {{symbol}}",
+        "req_author_plural": "Has enviado una solicitud para vender {{count}} {{symbol}}",
+        "req": "Otro usuario envió una solicitud para vender {{count}} {{symbol}}",
+        "req_plural": "Otro usuario envió una solicitud para vender {{count}} {{symbol}}"
+      }
+    },
+    "tokens": {
+      "req_author": "Has enviado una solicitud para crear un símbolo de moneda {{symbol}} para {{token}}",
+      "req": "Otro usuario envió una solicitud para crear un símbolo de moneda {{symbol}} para {{token}}",
+      "res": "Se ha registrado el símbolo de {{token}}"
+    }
+  },
+  "governance": {
+    "commit": {
+      "req_author": "Has enviado una solicitud para confirmar un nuevo valor de {{name}}: {{value}}",
+      "req": "Otro usuario envió una solicitud para confirmar el nuevo valor de {{name}}: {{value}}"
+    },
+    "add_support": {
+      "req_author": "Ha enviado una solicitud para añadir soporte para {{name}} de valor {{value}}",
+      "req": "Otro usuario envió una solicitud para añadir soporte para {{name}} de valor {{value}}"
+    },
+    "withdraw": {
+      "req_author": "Has enviado una solicitud para retirar tu saldo de la gobernación",
+      "req": "Otro usuario envió una solicitud para retirar su saldo de la gobernación"
+    }
+  },
+  "validator": {
+    "required": "Este campo es obligatorio",
+    "not_valid": "Este campo no es válido",
+    "decimals_range": "Los decimales deben estar entre {{from}} y {{to}}",
+    "max_value": "El valor máximo es {{value}}",
+    "integer": "El valor debe ser un entero",
+    "max_decimals": "El número máximo de decimales es {{value}}",
+    "min_value": "El valor mínimo es {{value}}",
+    "max_support": "La cantidad máxima es {{value}} RECH",
+    "min_support": "La cantidad mínima es {{value}} RECH",
+    "symbol_max": "El símbolo debe tener un máximo de 40 caracteres",
+    "symbol_reserved": "Este nombre de símbolo está reservado",
+    "symbol_not_valid": "El símbolo no es válido",
+    "symbol_uppercase": "El símbolo debe estar en mayúsculas"
+  }
+}

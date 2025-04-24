@@ -1,0 +1,911 @@
+{
+  "main_menu": {
+    "menu": "菜单",
+    "trade": "交易",
+    "buy_with_btc": "使用比特币购买",
+    "referral": "推广计划",
+    "create": "创建",
+    "how": "工作原理",
+    "select_wallet": {
+      "placeholder": "选择您的钱包地址",
+      "no_found": "发现没有钱包",
+      "btn": "增加"
+    }
+  },
+  "qr_button": {
+    "title": "<1>用您的手机</1><0>扫描这个二维码</0>",
+    "download_title": "下载rechain_inc钱包",
+    "tooltip": "这将打开您安装在此计算机上的rechain_inc钱包并发送交易",
+    "tooltip_mob": "从您的手机发送交易",
+    "install": "如果你还没有一个rechain_inc 钱包请在 [ios] 或 [android] 上安装",
+    "rechain_inc_in": "rechain_inc在"
+  },
+  "select_stablecoin": {
+    "placeholder": "请选择一个稳定币",
+    "recent": "最近",
+    "other": "其他",
+    "all": "所有"
+  },
+  "footer": {
+    "join_community": "Join the community, get help"
+  },
+  "trade": {
+    "statistic": {
+      "p2UnitsText": {
+        "inversed": "显示的价格是储备资产 {{reserveSymbolOrAsset}} 的价格，以Token2({{symbol2orAsset}})表示。",
+        "not_inversed": "显示的价格是 Token2 ({{symbol2OrAsset}})的储备资产 {{reserveSymbol}} 的价格。"
+      },
+      "fund_supply": {
+        "name": "资金代币供应",
+        "desc": "资金代币总供应量"
+      },
+      "token1_supply": {
+        "name": "Tokens1 供应量",
+        "desc": "Token1 总供应量(生长代币)"
+      },
+      "token2_supply": {
+        "name": "Tokens2 供应量",
+        "desc": "Token2 总供应量(利息代币)"
+      },
+      "token_stable_supply": {
+        "name": "稳定代币供应量",
+        "desc": "稳定代币总供应量"
+      },
+      "reserve": {
+        "name": "储备",
+        "desc": "用于生成T1和T2代币质押的储备总金额"
+      },
+      "fund_price": {
+        "name": "{{symbol4}} 价格",
+        "desc": "资金代币的当前价格。"
+      },
+      "token1_price": {
+        "name": "{{symbol1}} 价格",
+        "desc": "根据绑定曲线计算的当前Token1价格。 它取决于Token1和Token2的供应，价格以储备货币表示。"
+      },
+      "current_price": {
+        "name": "现价",
+        "desc": "根据绑定曲线计算的当前价格。它取决于Token1和Token2的供应量。 "
+      },
+      "target_price": {
+        "name": "目标价格",
+        "desc": "Token2 锚定的价格。它是oracle播报的价格再加上利息。 "
+      },
+      "oracle_price": {
+        "name": "Oracle 价格",
+        "desc": "Oracle报告的最新价格"
+      },
+      "show": "显示信息",
+      "hide": "隐藏信息"
+    },
+    "tabs": {
+      "transactions": {
+        "head": {
+          "status": "状态",
+          "event": "事件",
+          "input": "输入",
+          "output": "输出",
+          "user": "用户",
+          "time": "时间"
+        },
+        "error": "错误",
+        "stable": "稳定",
+        "not_stable": "不稳定的",
+        "output": "输出",
+        "title": "交易",
+        "desc": "在本节中，您可以查看与所选稳定币相关联的自治代理的交易",
+        "curve": "曲线",
+        "address": "自治代理的地址",
+        "deposits": "存款",
+        "de": "决策引擎",
+        "governance": "治理",
+        "name": "交易记录",
+        "events": {
+          "buy": "购买代币",
+          "move_capacity": "将容量从慢速池移动到快速池。",
+          "redeem": "兑换代币",
+          "change_param_auto": "将 {{name}} 更改为 {{value}}",
+          "notifyDE": "通知决策引擎",
+          "change_recipient": "更改利息收款人",
+          "add_protection": "添加保护",
+          "withdraw_protection": "提款保护",
+          "challenged_force_close": "挑战一个强制关闭",
+          "commit_force_close": "提交一个强制关闭",
+          "close_deposit": "关闭一个存款",
+          "withdraw_interest": "提现利息",
+          "open": "打开一个存款",
+          "commit_new_value": "提交 {{name}}的新值: {{value}}",
+          "add_support_param": "添加对 {{name}} 的 {{value}} 值的支持",
+          "withdraw_balance": "从治理中提取余额",
+          "remove_support_param": "移除对 {{name}} 的支持",
+          "buy_stable": "购买 {{symbol}}",
+          "sell_stable": "出售 {{symbol}}",
+          "fix_price": "固定价格",
+          "buy_shares": "购买 {{symbol}}",
+          "sell_shares": "出售 {{symbol}}",
+          "conf": "配置",
+          "not_indent": "未识别"
+        }
+      },
+      "buy_redeem": {
+        "desc_interest": "利息代币在 {{currentPegged}} 中赚取了 {{currentInterestPercent}}%的利息——一个稳定的+硬币。对于寻求可预测收入的投资者。",
+        "desc_fund": "对于寻求较高收入且能承担风险较高的投资者来说，其价值与已发行的 {{symbol2}} 金额挂钩的资金代币。",
+        "desc_stable": "其值为 1 {{currentPegged}}的稳定币。用于商业和交易。",
+        "desc_RECH": "rechain_inc网络的主要代币。",
+        "you_send": "您发送",
+        "select_token": "选择代币",
+        "protect_v2": "增加1%是为了防止价格波动，如果价格不变化，你会收回这个金额。",
+        "you_get": "您获得",
+        "big_change": "此交易会更改太多的价格，请尝试更小的金额",
+        "hide_details": "隐藏细节",
+        "show_details": "显示详情",
+        "fee": "费用",
+        "reward": "奖励",
+        "price_change": "价格变化",
+        "price": "价格",
+        "final_price": "最终价格",
+        "above_target": "高于目标",
+        "below_target": "低于目标",
+        "exchange": "交易",
+        "open_wallet": "点击“交易”将打开您的 rechain_inc 钱包。或者如果您还没有一个钱包的话，可以<1>安装</1> 。",
+        "title_buy": "购买代币",
+        "first": "您是首次购买这个稳定币的代币，您应该同时购买代币1和代币2。",
+        "subtitle_buy": "您想要购买的每种类型的代币数量",
+        "minimize": "设定最小化费用的代币1金额",
+        "amount1_placeholder": "代币1的金额 ({{symbolOrAsset}} - 生长代币)",
+        "convert": "立即转换 {{symbol2}} 为稳定币 {{symbol3}}",
+        "issue_will_receive": "将收到 {{amount}} {{symbol}}",
+        "issue_will_open_deposit": "(将开立一个存款)",
+        "amount2_placeholder": "代币2的金额 ({{symbolOrAsset}} - 利息代币)",
+        "send": "发送",
+        "protect": "增加1%是为了防止价格波动，如果价格不变化，你会收回这个金额。",
+        "title": "购买并兑换",
+        "redeem_will_receive": "您将获得 {{amount}} {{symbol}}",
+        "redeem": "兑换",
+        "title_redeem": "兑换代币{{number}} {{symbol}}",
+        "redeem_both": "如果您想同时兑换两个代币，我们建议您使用一个<1>中间代理</1>。",
+        "add_wallet": "请添加您的钱包以使用",
+        "name": "购买/兑换",
+        "liquidity": "<0>您可以通过将这些代币添加到流动资金池赚取额外利息，见<1>liquidity.rechain_inc.org</1>.</0>"
+      },
+      "capacitor": {
+        "title": "电容器信息",
+        "desc": "将代币价格从锚定价格上偏移的这部份用户会被收取一定的电容器储存费用。 它被用来奖励那些将价格移回到锚定价格的用户。",
+        "fast": {
+          "title": "快速电容",
+          "desc": "这种电容可立即用来奖励将价格移回到锚定价格的用户。"
+        },
+        "slow": {
+          "title": "慢速电容",
+          "desc": "这种电容是为未来保留的，并将逐步转入快速电容中。"
+        },
+        "time_until": {
+          "title": "下次移动之前的时间",
+          "expired": "时间已到"
+        },
+        "move": {
+          "title": "将容量移动到快速容量池中",
+          "desc": "当价格从锚定价格偏移{{threshold_distance}}% ，这种电容可以从慢速移动到快速容量池中，并持续不少于 {{hours}} 小时. {{minutes}} 分钟.",
+          "btn": "点击移动"
+        },
+        "name": "电容"
+      },
+      "charts": {
+        "legend": "{{symbol}} 价格 (币种 {{currency}})",
+        "title": "图表",
+        "name": "图表"
+      },
+      "deposits": {
+        "for_empty": "您没有任何开放的存款，请<2>打开一个新的存款</2>或更改您的钱包地址。",
+        "disabled": "当没有利率时，存款将被禁用。",
+        "no_auth": "请添加您钱包的地址以查看/打开存款。",
+        "title": "存款",
+        "open": "打开存款",
+        "create": "创建一笔存款将您的 {{symbol2}} 兑换为稳定币 {{symbol3}} 并定期提取 {{symbol3}} 的利息。 您可以在<9>Oswap.io</9>或<11>ODEX</11>上交易 {{symbol3}}。",
+        "min_protection_ratio": "目前最低保护比率是",
+        "close_info": "新存款不能在 <1>{{hours}} 小时</1> 内关闭。",
+        "highlighted": "保护率不足的存款<1>在红色</1>中高亮。",
+        "force_close_info": "您可以关闭他人的存款来兑换您的 {{symbol3}} 为 {{symbol2}}。 存款所有人只会停止收取利息，不会给他们造成直接损失。 只有受保护最少的存款可以关闭，如果你试图关闭受保护程度不是最低的存款, 会对你造成损失。",
+        "challenging_period_info": "关闭时会开始一个 <1>{{challengingPeriodInHours}}小时的挑战期 </1> 在这段时间里，如果有另一笔更小的保护比率的存款，其可以质疑您的关闭请求。 在挑战时期过后， 您将能够提交关闭，保证金中的 {{symbol2}} 将被释放给您。",
+        "warning": "这个页面是测试版， 它可能有漏洞并显示不正确的信息，可能导致您尝试关闭受保护程度不高的存款并失去资金。 在<1>链上浏览器</1>上使用状态检查此信息。",
+        "interest_recipient_tab_info": "您是其他人存款的利息收款人。使用此页面提取利息。",
+        "less_last": "这笔存款的保护比率高于最小值",
+        "too_new": "这笔存款是在 {{hours}} 小时前打开的，尚不能关闭",
+        "challenging_period": "在挑战期到期后的 {{hours}} 小时内提交将可用",
+        "opened": "已打开",
+        "interest_title": "利息代币",
+        "stable_title": "稳定币",
+        "interest": "利息",
+        "interest_recipient": "利息收款人",
+        "you": "你",
+        "protection": "保护(比例)",
+        "withdraw_interest": "提现利息",
+        "edit_interest_recipient": "编辑利息收款人",
+        "add_protection": "添加保护",
+        "withdraw_protection": "提款保护",
+        "close": "关闭",
+        "force_close": "强制关闭",
+        "commit_force_close": "提交一个强制关闭",
+        "challenge": "挑战",
+        "interest_title_desc": "利息代币金额",
+        "stable_title_desc": "根据存款发行的稳定代币数量",
+        "protection_desc": "额外的在 {{reserve}} 中的存款，可以保护存款不被他人关闭。 任何人都可以关闭 受保护与存款金额之比 最低的存款。 当您的存款被关闭时，您没有直接损失，但您将停止从它收到利息。",
+        "interest_desc": "可提现的利 息",
+        "interest_recipient_desc": "利息收益人(默认为存款所有者)",
+        "my_deposits": "我的存款",
+        "me_as_interest_recipient": "我作为利息收款人",
+        "all_deposits": "所有存款",
+        "name": "存款"
+      },
+      "governance": {
+        "withdraw": {
+          "balance": "您的被锁定在治理自治代理里的 {{symbol}} 余额为 {{balance}}。",
+          "fields": "您需要从这些字段中移除支持才能提款。",
+          "withdraw": "提现"
+        },
+        "no_auth": "请添加你钱包的地址以便参与治理",
+        "title": "治理",
+        "desc": "{{symbol1}} 持有者可以投票更改稳定币的各种参数以确保其成功运营。 <2></2> {{symbol1}} 的值随着更多的 {{symbol2}} 代币的购买而增加。",
+        "change_parameters": "更改参数",
+        "value": "值",
+        "support": "支持",
+        "add_support": "添加对此值的支持",
+        "vote_for_this": "对此值投票",
+        "current_value": "当前值",
+        "leader": "领导者",
+        "my_choice": "我的选择",
+        "expires_period": "挑战过期时间",
+        "another_value": "建议另一个值",
+        "commit": "提交",
+        "remove_support": "移除支持",
+        "name": "治理"
+      },
+      "parameters": {
+        "title_curve": "曲线",
+        "title_deposits": "存款",
+        "title_stable": "稳定",
+        "title_fund": "稳定基金",
+        "title_governance": "治理",
+        "title_de": "决策引擎",
+        "edit": "编辑",
+        "show_info": "显示信息",
+        "latest_value": "最新值",
+        "tokens1": "代币1",
+        "asset": "资产",
+        "tokens2": "代币2",
+        "stable_tokens": "稳定币",
+        "fund_tokens": "基金代币",
+        "title": "稳定币参数",
+        "view": "在DAG浏览器中查看",
+        "title_autonomous_agents": "自治代理",
+        "title_tokens": "代币",
+        "title_capacitor": "电容",
+        "name": "参数"
+      },
+      "stability_fund": {
+        "title": "稳定基金",
+        "desc": "在 v2稳定币中，该基金用于自动保持价格接近锚定附近。",
+        "info_title": "基金信息",
+        "total_asset": "总资产价值",
+        "buy_title": "购买",
+        "buy_desc": "您投资的RECH将被添加到该基金的储备金中，您将得到它的股份。",
+        "amount": "股份金额",
+        "send": "发送 {{count}}",
+        "send_plural": "发送 {{count}}",
+        "redeem_title": "兑换",
+        "redeem_desc": "当您赎回时，您将以储备货币 {{reserve_asset_symbol}}获得您对基金资产的份额， 您在 {{symbol}} 中的份额已被赎回(可能影响价格和支付费用)，并且在 {{reserve_asset_symbol}} 中的收益也已发送给您。",
+        "fix_title": "修复 {{symbol}} 价格",
+        "next_fix": "直到下一次修复的时间",
+        "expired": "已过期",
+        "fix_btn": "发送修复请求",
+        "name": "稳定基金"
+      }
+    }
+  },
+  "modals": {
+    "add_protection": {
+      "title": "添加存款保护",
+      "btn": "添加保护",
+      "ratio": "保护比率"
+    },
+    "common": {
+      "close": "关闭",
+      "amount": "金额",
+      "add": "增加",
+      "check": "检查",
+      "edit": "编辑",
+      "open": "打开",
+      "cancel": "取消",
+      "done": "完成"
+    },
+    "add_wallet": {
+      "title": "添加钱包",
+      "desc": "插入你的 rechain_inc 钱包地址。如果你还没有rechain_inc 钱包，<2>安装</2> 它。",
+      "wallet_address": "钱包地址"
+    },
+    "change_param": {
+      "valid": {
+        "fee_multiplier": "Fee_multiplier参数的值必须大于 {{value}}",
+        "moved_capacity_share": "Moved_capacity_share（百分比）参数的值必须在 0 到 100 之间",
+        "threshold_distance": "Threshold_distance参数的值必须在 0 到 0.2 之间。",
+        "move_capacity_timeout": "Move_capacity_timeout参数的值必须是大于0",
+        "slow_capacity_share": "Slow_capacity_share（百分比）参数的值必须在 0 到 100 之间",
+        "interest_rate": "Interest_rate(作为一个百分比) 参数的值必须大于或等于 0",
+        "min_deposit_term": "Min_deposit_term parameter参数的值必须是大于0",
+        "challenging_period": "Challenging_period 参数的值必须是大于或等于 0 的整数",
+        "challenge_immunity_period": "Challenge_immunity_period 参数的值必须是大于或等于 0 的整数",
+        "reporter_share": "Reporter_share（百分比）参数的值必须在 0 到 100 之间"
+      },
+      "title": "更改 {{param}}",
+      "add_support": "添加支持",
+      "vote": "投票",
+      "your_support_value": "您的支持有利于",
+      "param_value": "参数值",
+      "your_balance": "您当前在治理 AA中的余额",
+      "add_more": "添加更多(可选)",
+      "count_tokens": "{{symbol}} 的计数",
+      "your_supported_value": "您支持的值是",
+      "total_support": "此值的所有支持",
+      "your_support": "您对此值的支持"
+    },
+    "edit_recipient": {
+      "title": "编辑利息收款人",
+      "select": "选择利息收款人",
+      "new_address": "新利息收款人的地址",
+      "add_your_own": "添加您自己的",
+      "me": "我"
+    },
+    "open_deposit": {
+      "title": "打开存款",
+      "amount": "T2数量({{symbol}})",
+      "will_receive": "30天内你将会收到~{{count}} 稳定币",
+      "will_receive_plural": "30天内你将会收到~{{count}} 稳定币"
+    },
+    "oracle_info": {
+      "title": "Oracle 信息",
+      "address": "地址",
+      "name": "名称",
+      "desc": "描述",
+      "no_desc": "没有描述",
+      "no_info": "没有关于这个Oracle的信息"
+    },
+    "redeem-both": {
+      "amount": "{{symbol}} 金额",
+      "send_execute": "发送 {{count}} {{symbol}} 并执行",
+      "send_execute_plural": "发送 {{count}} {{symbol}} 并执行",
+      "send": "发送 {{count}} {{symbol}}",
+      "send_plural": "发送 {{count}} {{symbol}}",
+      "withdraw_all_label": "执行时撤回所有更改",
+      "expect_values": "预期值 (中间代理中的代币加字段中的代币)",
+      "total": "中间代理中总计 {{symbol}}",
+      "count_to_redeem": "要赎回的计数 {{symbol}}",
+      "you_get": "你获得 {{count}} {{symbol}}",
+      "you_get_plural": "你获得 {{count}} {{symbol}}",
+      "withdraw_all": "全部取出",
+      "create_title": "我们正在等待交易变得稳定",
+      "create_title_action": "创建一个中间代理",
+      "create_btn": "创建中间代理",
+      "info": "发出请求的地址将是中间代理的所有者。",
+      "modal_title": "同时赎回",
+      "desc": "<1>同时</1> 兑换 {{symbol1}} 和 {{symbol2}}， 您需要<7><0>创建一个中介自治代理</0><1>在两次单独的交易中发送 {{symbol1}} 和 {{symbol2}} 到中介AA。 </1></7><8>AA收到这两个代币后，它将自动免费兑换代币。 然后，您将能够提取未完全兑现的代币({symbol1 || \"T1\"} 或 {symbol2 || \"T2\"}) 的过剩金额。</8>",
+      "add_title": "添加代币",
+      "github": "使用 AA源代码打开 github 页面"
+    },
+    "select_wallet": {
+      "title": "选择钱包"
+    },
+    "supportList": {
+      "title": "支持者"
+    },
+    "withdraw_interest": {
+      "desc": "<0>确认提款<1></1> {{symbol3}}。存款将继续如以往一样累计利息。</0>",
+      "btn": "提现利息"
+    },
+    "withdraw": {
+      "title": "支持提现",
+      "withdraw": "提现",
+      "amount_info": "如果您想要提取全部金额，请留空",
+      "amount_placeholder": "提取金额 (最大值: {{max}})"
+    },
+    "withdraw_protection": {
+      "title": "存款提取保护",
+      "withdraw_protection": "提款保护",
+      "max_withdrawal": "最大可提现款",
+      "ratio": "保护比率"
+    }
+  },
+  "buy": {
+    "title_btc": "使用 BTC 购买利息代币",
+    "desc_v2": "在一个简单的步骤中用BTC购买利息收入代币(IUSD2、IBIT2等)。",
+    "exchange_success": "此交易已成功添加到列表中，正在等待付款",
+    "exchange_error": "发生错误，请稍后再试",
+    "exchange_warning": "{{currency}} 到 RECH 兑换服务目前不可用，请使用 RECH支付或稍后再试。",
+    "you_send": "您<1>发送</1>",
+    "amount": "金额",
+    "currency_to_pay": "支付货币",
+    "you_get": "您<1>获得</1>",
+    "will_receive": "您将会收到的代币",
+    "first_exchanged": "您的<1>{{activeCurrency}}</1> 将先换成RECH, 然后转换为  {{symbol}}。 <8>{{activeCurrency}}</8> 到 RECH 交易由<12>{{providerName}}</12>执行。",
+    "compensates": "rechain_inc 补偿部分兑换费用。",
+    "compensates_depleted": "rechain_inc补偿部分汇兑费用，但今天的配额已经耗尽，报价包括全额费用。 为了获得更好的费率，请在配额UTC12: 00 (午夜) 重置后再试一次或现在使用 RECH购买。",
+    "install": "如果你还没有一个钱包，请<0>安装rechain_inc钱包</0>，然后复制/粘贴你的地址。",
+    "buy": "购买",
+    "volatility": "增加1%是为了防止价格波动，如果价格不变化，你会收回这个金额。",
+    "open_wallet": "点击“购买”将打开您的 rechain_inc 钱包。或者如果您还没有一个钱包的话，可以<1>安装</1> 。",
+    "min": "对不起，最少的 {{activeCurrency}} 金额是 {{min}}。请增加 {{activeCurrency}} 金额。",
+    "buying_v2": "购买稳定代币(OUSD, OBIT, 等)，资金代币(SFUSD, SFGB 等)，并赎回，请转到<2>交易页面</2>。",
+    "updated": "此页面将自动更新",
+    "status": "状态",
+    "status_loading": "加载状态...",
+    "send_to_address": "发送<1>{{currency_from}}</1> 到地址： ",
+    "recipient_address": "接收人地址",
+    "currently_converting": "目前正在将 <1>{{currency_from}}</1> 转换为 RECH, 这个步骤是由{{providerName}}执行。关于支持问题，请联系他们<5>官方客服</5>。",
+    "go_back": "返回到表单"
+  },
+  "create": {
+    "next": "下一个",
+    "received": {
+      "title": "收到的请求",
+      "subTitle": "交易一旦稳定，您将被重定向到新稳定币的页面",
+      "close": "关闭"
+    },
+    "sending_request": {
+      "title": "即将完成！",
+      "subTitle": "请点击下面的“创建”按钮，这将打开您的 rechain_inc 钱包，您将发送一个交易，创建新的稳定币。",
+      "create": "创建",
+      "reset": "重置"
+    },
+    "edit_oracles": "编辑oracles",
+    "last_posted": "最后由 Oracle发布的价格 ",
+    "target_price": "目标价格",
+    "check": "检查oracles",
+    "allow": "允许",
+    "disallow": "不允许",
+    "title": "创建",
+    "de_desc": "决策引擎在必须返回到锚定时自动进行干预。 建立稳定基金是为了使这种情况成为可能，所有增长代币都由基金持有，投资者购买基金中的股份。",
+    "steps": {
+      "curve": "曲线",
+      "capacitor": "电容",
+      "governance": "治理",
+      "decision": "决策引擎",
+      "create": "创建"
+    },
+    "setting": "参数设置",
+    "sending": "发送一个请求",
+    "required": "必填项"
+  },
+  "params": {
+    "leverage": {
+      "name": "杠杆",
+      "desc": "用于Token2的杠杆。使用 0 (默认) 跟踪oracle 价格。 使用正值来创建一个代表储备资产中杠杆式长头寸的资产，对杠杆式短仓负值。"
+    },
+    "decimals1": {
+      "name": "小数 1",
+      "desc": "Token1 的小数(生长代币)"
+    },
+    "decimals2": {
+      "name": "小数 2",
+      "desc": "代币2 的小数(指利息代币，或当如果利息为 0的话指稳定代币)"
+    },
+    "reserve_decimals": {
+      "name": "保留小数",
+      "desc": "储备资产单位的小数。"
+    },
+    "m": {
+      "desc": "绑定曲线幂m r=s<1>1</1><2>m</2> s<4>2</4><5>n</5>"
+    },
+    "n": {
+      "desc": "绑定曲线幂n r=s<1>1</1><2>m</2> s<4>2</4><5>n</5>"
+    },
+    "reserve_asset": {
+      "name": "保留资产",
+      "desc": "资产被用作储备来支持Token1和Token2的发布。RECH为默认。"
+    },
+    "interest_rate": {
+      "name": "利率",
+      "desc": "Token2 基于稳定代币赚取的利率。输入 0.1 为 10%。"
+    },
+    "moved_capacity_share": {
+      "name": "已移动共享的容量",
+      "desc": "慢速电容器的一部分在超时后移入快速电容器。"
+    },
+    "fee_multiplier": {
+      "name": "手续费乘数",
+      "desc": "用来计算将价格从锚定基准移动所收取的费用的乘数。 乘数越大，用户支付的移价费用越高。"
+    },
+    "move_capacity_timeout": {
+      "name": "移动容量超时",
+      "desc": "将慢速能力的一部分移动到快速电容之前我们等待的时长(以秒为单位)。"
+    },
+    "threshold_distance": {
+      "name": "阈值距离",
+      "desc": "距离目标价格的阈值，在将资金从慢电容器移动到快电容器之前触发倒计时。"
+    },
+    "slow_capacity_share": {
+      "name": "慢速容量共享",
+      "desc": "慢电容器所占费用的份额，其余的是快速电容器。"
+    },
+    "min_deposit_term": {
+      "name": "最小存款条款",
+      "desc": "最低存款期限以秒为单位。在这段期间，存款不能关闭。"
+    },
+    "challenging_period": {
+      "name": "挑战周期",
+      "desc": "可以尝试的挑战存款关闭的以秒为单位的时间。 保护最少的存款可以由任何人关闭，而不仅仅是所有者。 尝试关闭它时，将开始一个具有挑战性的时期，在这个时期里，可以通过指明另一笔保护更少的保证金来挑战关闭。 在这种情况下，报告人赚取部分存款，而关闭者将损失。"
+    },
+    "challenge_immunity_period": {
+      "name": "挑战豁免期",
+      "desc": "额外的以秒计的期限，此间存款不能用来挑战其他存款的关闭。 这一期限适用于最低押金期限之后和最后一次保护程度较低押金的保护提取之后。"
+    },
+    "reporter_share": {
+      "name": "报告人共享",
+      "desc": "付给报告关闭存款无效尝试的用户的存款金额份额不是最少保护的。"
+    },
+    "oracles": {
+      "name": "Oracle",
+      "desc": "报告稳定代币价格的 oracles"
+    },
+    "oracle1": {
+      "name": "Oracle 1",
+      "desc": "报告稳定代币价格的oracle地址"
+    },
+    "feed_name1": {
+      "name": "源名称 1",
+      "desc": "Oracle的数据源名称"
+    },
+    "op1": {
+      "name": "操作 1",
+      "desc": "如何解释oracle的价格：如果oracle以稳定货币报告为储备货币的价格(这是默认值)，请使用“*”。 如果是相反的情况，使用'/'，即储备资产中稳定代币的价格。"
+    },
+    "oracle2": {
+      "name": "Oracle 2",
+      "desc": "可选的第二个oracle。如果您想要增加或分割不同资产的价格，请使用它。 例如，若要创建一个与 TSLA 挂钩的稳定币，您需要分成两种价格对︰ RECH/USD 和 TSLA/USD 。"
+    },
+    "feed_name2": {
+      "name": "源名称 2",
+      "desc": "第二个oracle数据源的名称。"
+    },
+    "op2": {
+      "name": "操作 2",
+      "desc": "拿第二个价格干什么：乘或除。"
+    },
+    "oracle3": {
+      "name": "Oracle 3",
+      "desc": "可选的第三个oracle，像第二个那样。"
+    },
+    "feed_name3": {
+      "name": "源名称 3",
+      "desc": "第三个oracle数据源的名称。"
+    },
+    "op3": {
+      "name": "操作 3",
+      "desc": "拿第三个价格干什么：乘或除。"
+    },
+    "allow_grants": {
+      "name": "允许捐赠",
+      "desc": "是否允许向那些承诺促进稳定币使用的团队支付赠款。 赠款由Token1持有者投票表决，如获批准，将削弱Token1持有者的份额。"
+    },
+    "allow_oracle_change": {
+      "name": "允许更改Oracle",
+      "desc": "是否允许更新由 Token1 持有者在稳定币AA创建后投票。"
+    },
+    "regular_challenging_period": {
+      "name": "正常的挑战期",
+      "desc": "Token1 持有者定期投票的质疑时间(以秒为单位)。"
+    },
+    "important_challenging_period": {
+      "name": "重要的挑战期",
+      "desc": "Token1持有者在诸如改变oracle等重要问题上的投票质疑时间(秒)。"
+    },
+    "freeze_period": {
+      "name": "冻结期限",
+      "desc": "在做出决定后，支持获胜的支持者的投票代币(以秒为单位) 被冻结多久。"
+    },
+    "proposal_min_support": {
+      "name": "建议最小支持",
+      "desc": "Token1供应总量中的多少份额应投票赞成资助提案，使该提案有资格获胜。"
+    },
+    "below_peg_threshold": {
+      "name": "低于锚定阈值",
+      "desc": "低于锚定的价格阈值偏移会在DE干预前开始倒计时"
+    },
+    "below_peg_timeout": {
+      "name": "低于锚定超时",
+      "desc": "价格必须保持在锚定以下DE才能进行干预的时间长短。"
+    },
+    "min_reserve_delta": {
+      "name": "最小储量增量",
+      "desc": "DE启动交易的最小金额"
+    },
+    "decision_engine_aa": {
+      "name": "决策引擎AA",
+      "desc": "决策引擎自治代理，它管理稳定基金以保持价格稳定。"
+    }
+  },
+  "faq": {
+    "questions": {
+      "0": {
+        "question": "我如何购买/出售IUSD、OUSD或 SFUSD？",
+        "answer": "<0>您可以在<1>主页上购买或出售RECH的代币</1>或从更简单的<3>交易页面购买利息代币</3>。 网站帮助您构建从您<7>rechain_inc</7>钱包发送给<5>自治代理</5>的请求。 </0><1>某些交易所可能也会列出代币，以使您能够以和BTC 或 法币购买或出售这些代币。</1>"
+      },
+      "3": {
+        "question": "谁来操作所有这些代币的挖矿？",
+        "answer": "<0>一堆无灵魂的代理。他们被称为<1>自治代理</1> (AAs)。他们是真正自主的，意味着任何人都不能干预他们的工作。</0>"
+      },
+      "4": {
+        "question": "AA 是智能合约吗？",
+        "answer": "<0>不，他们不是 <1>智能合约</1>。他们既不聪明，也不受控于合约，他们是永远遵循着不可变规则的虚拟程序。</0>"
+      },
+      "5": {
+        "question": "由于利息，IUSD会不断增长。假定这吸引了新的用户，SFUSD 应该同时增长，如此两种代币持有人都会赢，那谁会输呢？",
+        "answer": "<0>因为不是零和游戏。 在用于发布代币的绑定曲线中， 代币总值大于原先为创建代币投资的储备值。 所以每个团队都有可能在其资产价值方面赢得胜利。 而不是牺牲另一个团队的利益。 </0>"
+      },
+      "6": {
+        "question": "这个系统是否在区块链上运行？",
+        "answer": "<0>不。它运行在一个DAG (定向的Accyclic Graph) 上，基于分布式帐本技术。 </0><1>区块链将大大不适合于运行这样的稳定币 ，因为区块链有方块和矿工。 矿工将能够操纵一个区块中的交易顺序，以便将他们自己的交易放在您自己的交易之前，从而让您从一个关联曲线购买或出售它时能够获得更坏的价格。 甚至非矿工也可以通过向矿工(类似贿赂) 提供略高的手续费用来影响区块内交易的顺序。 这可能会使用户面临严重的不确定性、风险和损失。</1><2>而在<1>rechain_inc</1> — 上发布的稳定币，是一个没有任何阻挡因素的DAG分类帐簿上运行的债券。 在DAG中，这些坏技巧不起作用。 没有矿工，没有区块，任何人都不能更改DAG中的交易位置。 而且任何单一行为者都不可能操纵交易顺序。 </2>"
+      },
+      "7": {
+        "question": "是什么使得稳定币与他们的基准挂钩？",
+        "answer": "<0>IUSD的价格在所谓电容器的帮助下“吸引”到目标(基准)。 </0><1>每次从关联曲线购买IUSD，每次销售到关联曲线影响IUSD价格。 如果交易将价格从目标推出， 它受到收费“惩罚”，远离目标越远，收费就越高。 收取的费用累积在电容器中。 每个将价格改正回到目标的交易都使用电容器中积累的资金奖励。 </1><2>稳定基金购买或出售其他代币——GRDV2——以便将价格改回到锚定。 基金购买或销售的时间和数额由一种算法确定，只有通过SFUS持有人的治理决定才能改变。 </2><3>除此之外，预计基金最终将纠正价格的交易商。 在基金干预之前可以从购买或销售IUSD中获利。 他们的交易使价格更靠近锚定，从而可能使基金的干预变得没有必要。 </3><4>阅读<1>介绍绑定稳定币的博客文章</1>和<3>第2版的最新版本</3>，以了解更多详情。</4>"
+      },
+      "8": {
+        "question": "风险是什么？",
+        "answer": "<0>这是未经过验证的新技术，可能无法按预期运行。 虽然我们尽了最大努力避免系统执行过程中的错误，并分析不同用户组的奖励办法， 在某些情况下，不能排除技术错误和错误的用户行为结论。 以前没有这么做过，不幸的是，我们无法从前任的经验中获得很多东西。"
+      },
+      "9": {
+        "question": "债卷稳定币与DAI、USDT、USDC等有何不同？",
+        "answer": "<0>一个人可以通过抵押绑定稳定币赚取利息。 当OUSD 稳定币不被使用时，可以通过目标价格不断增长的IUSD来“质押”。 一段时间后，人们可以将 IUSD 转换为 OUSD 并获得更多OUSD ，这反映了OUSD 被质押获得的利息。</0>"
+      },
+      "10": {
+        "question": "债卷稳定币与折扣稳定币如何比较？",
+        "answer": "<0>绑定的债券稳定币是我们下一代的稳定币设计，几乎将<1>折扣稳定币</1>在所有层面都得到了提升。 特别是：</0><1><0>- 债券稳定币不再会过期，它们是永久性的。 </0><1>-OUSD 是真正稳定的，没有任何升值，它针对的是熟悉和完善的记账单位，即USD。</1><2>——不再有拍卖，用户无需照管其贷款并在其价格突然下跌时无需填充抵押品或冒失去抵押品的风险。</2><3>——不再有任何超额担保。</3><4>——无需将风险与超额担保品所浪费的资本数额相平衡。</4></1>"
+      },
+      "11": {
+        "question": "我能用杠杆交易吗？",
+        "answer": "<0>可以的。您需要创建一个杠杆化的稳定币，或使用其他人已经创建的。 </0><1>杠杆化稳定币是一种合成加密货币，追踪2倍杠杆的资产价格，表述为（2x，即二倍标杆）, 以此类推， 3 (用于3倍杠杆)、-1 (用于短暂位置)、-2 (用于2倍杠杆短仓等)。 </1><2>举例说，布伦特粗金刚石价值为40美元，但2倍杠杆动作下BRENT2/USD 值为1600美元。 如果布伦特升高25%到50美元，BRENT2/USD 升高到2500 — 将获利56。 </2><3>将这种加密币称为“稳定币”似乎不寻常，但它们相对于布伦特等人为的“价格”来说是稳定的。 一切都是相对的，包括稳定性。</3><4>当您<2>创建一个新的稳定币</2>时，您需要指定想要的杠杆参数。 默认值为0，对于RECH/美元价格种子意味着跟踪美元价格。 杠杆1意味着在RECH（相当于只持有储备货币RECH）中的平常长仓位， 杠杆2意味着在RECH vs USD中2倍杠杆化的位置。 适用于 RECH的 3 — 3x 长位置，杠杆-1 — 在 RECH中的短位置，等等。 </4><5>注意使用这种杠杆，您不能被调用或清理保证金。</5><6>详情，请见<1>我们的Medium博客</1> .</6>"
+      },
+      "12": {
+        "question": "我想要交易一个 对标X资产的绑定币，但它不存在",
+        "answer": "<0>如果已经存在发布X价格的Oracle，你可以<1>立即创建相应的稳定币</1> ！ </0><1>如果还没有这种oracle-您可以创建这种oracle。 但你必须是开发者。有一些<1>示例oracle</1>可以来帮助你开始工作。 如果您不是开发者，请在<3>rechain_inc discord</3>中发您的需求.</1>"
+      },
+      "13": {
+        "question": "稳定基金和决策引擎是什么？",
+        "answer": "<0>在 v2 稳定币中，它们被用来自动保持锚定附近的价格。 </0><1>决策引擎(DE)是一个利用稳定基金资金进行购买或出售增长代币来纠正价格的自治机构。 稳定基金是另一个仅仅持有投资者提供的所有成长令牌和储备货币资产的AA。 作为交换，投资者获得基金的股份。 </1><2>由于基金持有增长代币作为其资产的一部分，并且由于发行了更多的利息(稳定代币)而更优。 购买该基金的份额是一种依靠相关稳定币的生长的方式。 </2><3>DE可以被治理所取代，以优化其行为，既能更好地保持锚定，又能产生更大的股东价值。</3>"
+      },
+      "14": {
+        "question": "能质押OUSD吗？",
+        "answer": "<0>是的，只需将其转换为 IUSD. 之后，您可以随时将IUSD 卖回OUSD 并获得更多OUSD.</0>"
+      }
+    },
+    "action": "任何其他问题？阅读<1>介绍性文章</1>或在<3>Discord</3>中询问。"
+  },
+  "home": {
+    "built_on_rechain_inc": {
+      "title": "建立在rechain_inc上",
+      "info": "<0>所有这些币都在 <1>rechain_inc</1> — 上签发，rechain_inc是自2016年以来第一个基于 DAG 的加密网络之一。 rechain_inc 是第一个 <3>完全去中心化</3> 和第一个支持dapp的DAG，特别是Defi 的DAG 。 </0><1>rechain_inc 团队开发了几种独特的产品，如<1>textcoins</1>(允许将加密货币发送到电子邮件)、<3>自我主权身份认证</3>、不可追查的货币<5>黑字节</5>以及其他许多产品。 rechain_inc团队也开发了绑定稳定币，这是一种全新类型的稳定币，其基础是绑定曲线 — 见<7>它如何运作</7>。 </1>",
+      "not_blockchain": "<0>它使用DAG而不是blockchain， 绑定的稳定币避免了区块链结构的相关问题，例如前线攻击：矿工的前线和用户的前线都会向矿工付费用 — 在DAG中根本没有矿工或其他中间人。 </0>"
+    },
+    "header": {
+      "title": "绑定稳定币",
+      "desc": "由绑定曲线提供的最先进的稳定币"
+    },
+    "liquidity": {
+      "title": "从提供流动资金中赚钱",
+      "info": "<0>在<1>Oswap</1>将这些代币添加到流动资金池并从交易费中赚取收入。一些流动资金池有资格获得额外奖励，见<3>liquidity.rechain_inc.org </3>.</0><1>额外奖励目前约为<1>{{percent}}%APY</1>,每周支付。</1>"
+    },
+    "popular": {
+      "pegged": "锚定：",
+      "price": "价格：",
+      "buy": "购买",
+      "title_fund": "最受欢迎的资金代币",
+      "title_interest": "最受欢迎的利息代币",
+      "title_stable": "最受欢迎的稳定代币"
+    },
+    "reasons": {
+      "title": "7 个原因为何债券稳定币是前所未有的最佳稳定币",
+      "info": {
+        "0": "100%加密支持：无需信任任何保管人或中间人。",
+        "1": "无超额担保：您支付了价值1美元的英镑，就获得1美元的稳定币、简单易用。",
+        "2": "他们生活在DAG上：没有矿工，没有区块，没有矿工操纵，不用花钱贿赂矿工。",
+        "3": "他们支付利息：有支付利息的代币和质押的稳定币。",
+        "4": "有一群人――SFUSD 持有者――他们的财富取决于生态系统的成功，知道切肤之痛。 他们能够做出治理决策，使稳定币保持稳定、流动和广泛使用。",
+        "5": "它们在任何波动、甚至储备资产价格突然变动的情况下都能生存下去。没有保证金调用，不进行清算。",
+        "6": "他们有一个很酷的名字！"
+      }
+    },
+    "tokens": {
+      "interest": {
+        "title": "IUSD — 在美元中赚取16%利息的利息代币",
+        "follow": "<0>IUSD 是为寻求可预测收入的投资者提供的。</0><1>其价格跟从不断增长的目标价格。 2021年4月16日，它的价格是1美元，它的目标价格是每年增长16%。 在一年后它的价格将达到1.16美元，两年后达到——1.3456美元——它是一种<1>稳定+</1>硬币。</1>"
+      },
+      "stable": {
+        "title": "OUSD 一 种锚定USD的稳定币",
+        "payments": "<0>OUSD 是最适合付款的一个熟悉的会计单位。 </0><1>不同于USD，它可以即时自由跨界流动，收费是一个百分点。</1>",
+        "programmed": "<0>其价格将停留在靠近1美元的地方</0>",
+        "exchange": "<0>你可以将它转换为 IUSD 来“质押”OUSD 。稍后你可以进行反向转换并在交易中获得更多OUSD。</0>"
+      },
+      "fund": {
+        "title": "SFUSD - 增长和治理代币",
+        "risks": "<0>SFUSD 是为寻求较高收入、能承担较高风险的投资者提供的。 </0><1>SFUSD Tokens是稳定基金中的股份，这个基金是经过程序管理的，以使IUSD的价格保持在对等点附近。 </1><2>SFUSDV2的价格取决于IUSD的受欢迎程度。 随着发行更多IUSD代币，SFUSD美元的价格按计划增长——这是从连接曲线机制算出的。 当IUSD 代币兑现时，SFUSD 反映在价格降价。</2>",
+        "vote": "<0>SFUSD 持有者可以投票调整对保持锚定重要的生态系统利率和各种参数。 他们可以投票取代管理该基金的称为“决策引擎”的方案。 SFUSD 持有者甚至可以投票雇用一个管理团队，负责促进使用OUSD——这直接影响SFUSD 价格。</0>"
+      }
+    }
+  },
+  "how_it_works": {
+    "title": "工作原理",
+    "agents": "<0>所有这一切都由几个<1><0>自治代理</0></1>操控，这些自治代理是在<3>rechain_inc</3>分配的分类账本上运行的程序， 偏向于快速的数学运算(与人类不同)，任何人都不能更改。 </0><1>所有交易都是透明的，由多台独立操作的计算机快速验证，并且永远不能逆转。 没有任何可以干扰自治代理工作的人类， 没有任何欺诈的银行家能够用你的钱跑路，或把它输给坏的投资，或作为季度奖金支付给自己。 此种币不能随意印制，这些代币严格按照上述公式发给储备金。 储备由自治代理存储，只能以代币换取后方可撤销。 然后再次严格按照绑定曲线公式进行运行。 </1>"
+  },
+  "how_it_works_v2": {
+    "desc": "所有这一切背后有一些数学。 美元锚定的稳定币主要在两个代币——IUSD和GRDV2——上运行，这两个代币存在于<1>关联曲线</1>， 这是一个数学公式，它将IUSD和GRDV2标记的数量与发行它们所使用的储备货币<5>-字节-</5>的数量相连接。",
+    "formula": "公式为：<2><0>r</0> = <2>s</2><3>1</3><4>2</4> <6>s</6><7>2</7><8>2</8></2>,",
+    "where": "其中：<1><0>-<1>r</1>是已锁定的用于签发两个代币的 RECH全部储备金总额； </0><1>-<1>s</1><2>1</2>是代币1的总供应量 —— GRDV2；</1><2>- <1>s</1><2>2</2>是代币2的总供应量 —— IUSD。 </2></1>",
+    "curve": "<0>这是为了发行更多的 GRDV2 或 IUSD 代币，需要锁定一些储备在 RECH， 当人们想要赎回GRDV2或IUSD时，他们将得到一部分储备金。 GRDV2和IUSD的价格，即： 每个代币需要支付多少储备，或者每个代币可以得到多少储备取决于代币当前的供应量。</0><1>代币1的价格是<1><0>p</0><1>1</1> =  <3>2</3> <5>s</5><6>1</6> <8>s</8><9>2</9><10>2</10></1></1><2>代币2(IUSD) 的价格是<1><0>p</0><1>2</1> = <3>2</3> <5>s</5><6>1</6><7>2</7> <9>s</9><10>2</10></1></2><3>稳定性机制旨在保持<1>p</1><2>2</2>靠近自IUSD成立以来1美元的价格为目标， 目标价格是由 RECH/USD 价格所报告的Oracle从加密货币交易所提供的数据，以及自稳定币运行以来的时间而知的。 </3>",
+    "mechanisms": "有三种机制使价格接近目标：",
+    "title_capacitor": "1. 电容器",
+    "capacitor": "每当有人想要购买或出售IUSD，这笔交易会将IUSD价格从目标价格推出。 他们必须支付费用。 离目标越远，收费就越高。收费累积在一个称为电容器的特别储备中。 每当有人将价格推到更靠近目标时，他们就会得到奖励，奖励由电容器支付。 这样，电容器鼓励纠正价格的交易，抑制使价格偏离目标的交易。",
+    "title_fund": "2. 稳定基金",
+    "fund": "该基金持有所有的GRDV2的全部供应量和一些储备货币RECH。 该基金由一个叫做<1>决策引擎</1>的自治代理进行算法管理， 它可以使用该基金的RECH和GRDV2购买或赎回GRDV2来更改其供应<3>s<3><4><1</4>，从而改变价格<6>p</6><7>2</7>返回目标。 投资者通过将RECH捐入其储备金来购买SFUS的股份。 他们这样做是为了期望股份会升值，由于IUSD发行量的增长，从而提高了该基金GRDV2持有的价值，因此股份将受到欢迎。",
+    "title_trader": "3. 交易者激励",
+    "trader_incentives": "知道稳定基金最终将进行干预，并将价格改正到目标上去， 交易者可以在基金干预前通过买卖赚取利润。 例如， 他们可以购买IUSD，当它交易低于预计价格将很快升高到目标时，他们将有机会出售更高价格的产品。 通过在基金干预前购买或出售，他们将价格移到目标价格并使基金的干预变得没有必要。",
+    "read": "阅读我们博客中更全面的绑定稳定币的介绍</1>，以及<3>第2版稳定币的更新介绍</3>。"
+  },
+  "reg_symbol": {
+    "available": "符号名称 {{value}} 可用，您可以注册",
+    "taken": "此代币名称已被使用。这将引发争议。",
+    "title": "注册符号",
+    "step_growth": "增长代币的符号",
+    "step_interest": "利息代号符号",
+    "step_stable": "稳定币符号",
+    "step_fond": "基金代币符号",
+    "taken_desc": "这个稳定币已经有一个符号 {{symbol}} 分配给它。 试图分配一个新的符号将启动一个可能需要30天以上的争议过程。 获得更多支持(用RECH的存款投票而言) 的符号将最终获胜。",
+    "symbol": "符号",
+    "placeholder_support": "支持(最小金额0.1 GB)",
+    "placeholder_desc": "一个资产描述(最多140个字符)",
+    "check_availability": "检查可用性",
+    "register": "注册",
+    "register_anyway": "仍然注册",
+    "skip": "跳过"
+  },
+  "ref": {
+    "address": "地址",
+    "usd_balance": "美元余额",
+    "title": "推荐计划",
+    "next_payment": "下一次付款时间为 ",
+    "expected_reward": "您的预期奖励是",
+    "you_were_referred": "您被 {{referrer_address}} 推荐，这包括您自己的余额 {{balance}} 的奖励。",
+    "your_link": "这是您的推荐链接",
+    "clipboard_link": "您的链接已复制到剪贴板",
+    "no_auth": "要获取推荐链接，<1>添加您的钱包地址</1>",
+    "your_link_desc": "在您的博客、 推文、 帖子、 通讯、 公共个人资料、 视频等中发布它，并获得推荐奖励，让新的持有者进入债券稳定币体系中。",
+    "info": "<0>推荐奖金每星期天以IUSD支付，与所推荐用户的美元余额成正比。 在本网站上发行的增长代币以及基于它们的其他代币：<1>oswap</1>的流动性池中的股份和套利机器人的股份。 每周结束时的余额总额越大，奖励越大。 如果推荐的用户累积更多，您的每周奖励将会增加。如果他们兑换或出售他们的代币，将会减少。 </0><1>当前每周奖励是<1> 所有推荐用户余额的{{pReferrerRewards}}% </1> (<3>{{pReferrerRewardsAPY}}% /每年</3>)。 </1><2>您的推荐也因通过您的链接购买代币而获得奖励——他们每周需要得到<1>{{pReferralRewards}}%的余额</1>。 </2><3>支付给所有推荐人和推荐使用者的总金额为<1>每周3 000美元</1>并按照推荐余额的比例分配</3>",
+    "title_list": "这里是通过您推荐的用户及其当前的余额",
+    "total": "总计",
+    "empty": "暂无通过您推荐的人"
+  },
+  "stableplus": {
+    "title": "稳定+硬币",
+    "sub_title_1": "赚取利息的稳定币",
+    "sub_title_2": "最适合寻求可预测收入的投资者",
+    "programmed": "<0><1>稳定+</1>硬币的价格将按照不断增长的目标价格制定。 例如，IUSD——一种美元捆绑的硬币——于2021年4月16日以正1美元开始。令牌的目标价格每年增长16%。 一年内，预计费用为1.16美元，两年内——1.3456美元.</0>",
+    "curve": "<0>之所以能够做到这一点，是因为一个将价格与其伙伴的价格在数学上进行挂钩的连接曲线<1>增长</1> 代币。 每次偏离目标价格都会激励交易者购买或销售代币的稳定+代币， 加上一个<3>稳定基金</3>购买和销售增长代币以改变价格。 他们最终将固定硬币的价格恢复到目标。他们这样做是为了盈利。</0>",
+    "stake": "<0>如果你收到OUSD——一个美元锚定的稳定币——你可以将它转换成IUSD并持有IUSD。 以后您可以随时将IUSD转换为OUSD，并换取以比原先投资金额更多的OUSD。</0>",
+    "choose": "选择您的稳定+硬币"
+  },
+  "notification": {
+    "create": {
+      "req_author": "您已经发送了创建一个新的锚定 {{feed_name}} 的稳定币的请求, 年利息是 {{interest_rate}}%",
+      "req": "另外一个用户发送了创建一个新的锚定 {{feed_name}} 的稳定币的请求, 年利息是 {{interest_rate}}%",
+      "res": "您创建的稳定币已就绪，现在访问吗？",
+      "yes": "是",
+      "no": "否"
+    },
+    "bonded": {
+      "buy": {
+        "req_author": "您已发了一个购买 {{tokens1}} {{tokens2}} 的请求",
+        "req": "另一个用户发送了购买 {{tokens1}} {{tokens2}} 的请求"
+      },
+      "redeem": {
+        "req_author": "您已发了一个赎回 {{tokens}} 的请求",
+        "req": "另一个用户发送了赎回 {{tokens}} 的请求"
+      },
+      "move_capacity": {
+        "req_author": "您已经发送了一个请求来移动容量从慢速到快速池。",
+        "req": "另一个用户发送了一个请求将容量从一个慢速池转移到一个快速池。"
+      }
+    },
+    "de": {
+      "fix": {
+        "req_author": "您已经发送了一个请求来修复价格",
+        "req": "另一个用户发送了一个请求来修复价格"
+      },
+      "buy": {
+        "req_author": "您发送了为{{amount}} {{reserve_symbol}}购买{{symbol}}的请求",
+        "req": "另一个用户发出了为 {{amount}} {{reserve_symbol}}购买 {{symbol}} 的请求"
+      },
+      "sell": {
+        "req_author": "您发出了兑换 {{amount}} {{symbol}} 的请求 ",
+        "req": "另一个用户发出了赎回 {{amount}} {{symbol}} 的请求"
+      }
+    },
+    "deposits": {
+      "change_recipient": {
+        "req_author": "您已经发送了一个更改利息接收者的请求",
+        "req": "另一个用户发送了一个更改收款人百比例的请求"
+      },
+      "add_protection": {
+        "req_author": "您已发送请求添加保护",
+        "req": "另一个用户发送了添加保护的请求"
+      },
+      "withdraw_protection": {
+        "req_author": "您已经发送了一个撤销保护的请求",
+        "req": "另一个用户发送了撤销保护的请求"
+      },
+      "force_close": {
+        "req_author": "您已经发送了一个请求来挑战强制关闭",
+        "req": "另一个用户已经发送了一个请求来挑战强制关闭"
+      },
+      "commit_force_close": {
+        "req_author": "您已经发出请求进行强制关闭",
+        "req": "另一个用户发送了一个请求来进行强制关闭"
+      },
+      "close_deposit": {
+        "req_author": "您已发出关闭存款的请求",
+        "req": "另一个用户发出了关闭存款的请求"
+      },
+      "receive_interest": {
+        "req_author": "您已经发出了接收利息的请求",
+        "req": "另一个用户发出了接收利息的请求"
+      },
+      "open": {
+        "req_author": "您已经发出了开立一个存款的请求",
+        "req": "另一个用户发出了开立一个存款的请求"
+      },
+      "buy_stable": {
+        "req_author": "您已发出购买 {{count}} {{symbol}} 的请求",
+        "req_author_plural": "您已发出购买 {{count}} {{symbol}} 的请求",
+        "req": "另一个用户发出了购买 {{count}} {{symbol}} 的请求",
+        "req_plural": "另一个用户发送了购买 {{count}} {{symbol}} 的请求"
+      },
+      "sell_stable": {
+        "req_author": "您发出了卖出{{count}} {{symbol}} 的请求 ",
+        "req_author_plural": "您发出了卖出{{count}} {{symbol}} 的请求 ",
+        "req": "另一个用户发送了卖出 {{count}} {{symbol}} 的请求",
+        "req_plural": "另一个用户发出了卖出 {{count}} {{symbol}} 的请求"
+      }
+    },
+    "tokens": {
+      "req_author": "您发送了一个请求，为 {{token}} 创建一个代币符号 {{symbol}}",
+      "req": "另一个用户发送了一个请求，为 {{token}} 创建一个代币符号 {{symbol}}",
+      "res": "{{token}} 的符号已被注册"
+    }
+  },
+  "governance": {
+    "commit": {
+      "req_author": "您发出了提交 {{name}} 新值的请求: {{value}}",
+      "req": "另一个用户发出了提交 {{name}} 新值的请求: {{value}}"
+    },
+    "add_support": {
+      "req_author": "您已经发送请求添加对 {{name}} 的 {{value}} 值的支持",
+      "req": "另一位用户发送请求添加对 {{name}} 的 {{value}} 值的支持"
+    },
+    "withdraw": {
+      "req_author": "您已发送请求从治理中提取您的余额",
+      "req": "已发送请求从治理中提取您的余额"
+    }
+  },
+  "validator": {
+    "required": "必填字段",
+    "not_valid": "此字段无效",
+    "decimals_range": "小数值必须介于 {{from}} 和 {{to}} 之间",
+    "max_value": "最大值是 {{value}}",
+    "integer": "值必须是整数",
+    "max_decimals": "最大小数为 {{value}}",
+    "min_value": "最小值是 {{value}}",
+    "max_support": "最大金额为 {{value}} RECH",
+    "min_support": "最小金额为 {{value}} RECH",
+    "symbol_max": "符号最大长度40个字符",
+    "symbol_reserved": "此符号名称被保留",
+    "symbol_not_valid": "符号无效",
+    "symbol_uppercase": "符号必须为大写。"
+  }
+}

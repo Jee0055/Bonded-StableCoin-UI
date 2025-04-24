@@ -1,0 +1,49 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333333 !important;
+}
+button:active, button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+.ant-tabs,
+.ant-checkbox + span,
+.ant-layout,
+.ant-table,
+.ant-steps,
+.ant-form,
+.ant-select,
+h1.ant-typography,
+h2.ant-typography,
+h3.ant-typography,
+h4.ant-typography,
+.ant-list,
+.ant-card-body,
+.ant-layout,
+.ant-layout-header {
+  color: #333333 !important;
+}
+.ant-menu-horizontal > .ant-menu-item a {
+  color: #333333;
+}
+.ant-menu-horizontal > .ant-menu-item-selected a {
+  color: #0137FF !important;
+}
+
+.ant-menu-vertical > .ant-menu-item a {
+  color: #333333;
+}
+.ant-menu-vertical > .ant-menu-item-selected a {
+  color: #0137FF !important;
+}
+
+.ant-table .ant-table-footer {
+  padding-left: 0 !important;
+}
+
+.ant-tabs-tab-btn a {
+  color: inherit !important;
+  pointer-events: none;
+}
